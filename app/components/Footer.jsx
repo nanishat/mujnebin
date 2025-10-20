@@ -18,9 +18,9 @@ const Footer = () => {
         <p>© 2025 Safiul Mujnebin. All rights reserved.</p>
 
         <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
-          <li><a target='_blank' href="">Github</a></li>
-          <li><a target='_blank' href="">LinkedIn</a></li>
-          <li><a target='_blank' href="">Discord</a></li>
+          <li><a target='_blank' href="https://github.com/nanishat">Github</a></li>
+          <li><a target='_blank' href="https://www.linkedin.com/in/md-safiul-mujnebin-149b90187/">LinkedIn</a></li>
+          <li><a target='_blank' href="https://discord.com/users/702535873450999838">Discord</a></li>
         </ul>
       </div>
     </div>
