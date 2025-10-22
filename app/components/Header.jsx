@@ -21,7 +21,16 @@ const Header = () => {
         className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'
       >
         Hi! I'm Safiul Mujnebin
-        <Image src={assets.hand_icon} alt='' className='w-6' />
+        <motion.div
+          animate={{ rotate: [0, 15, -10, 15, 0] }}
+          transition={{
+            duration: 1.5,
+            ease: 'easeInOut',
+            repeat: Infinity,
+          }}
+        >
+          <Image src={assets.hand_icon} alt='' className='w-8' />
+        </motion.div>
       </motion.h3>
 
       <motion.h1
@@ -30,7 +39,7 @@ const Header = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className='text-3xl sm:text-6xl lg:text-[66px] font-Ovo'
       >
-        frontend web developer based in Bangladesh.
+        Full Stack Engineer<br /> based in Bangladesh.
       </motion.h1>
 
       <motion.p

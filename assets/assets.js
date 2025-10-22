@@ -1,5 +1,5 @@
 import user_image from './user-image.png';
-import code_icon from './code-icon.png';
+import publications_icon from './publications-icon.png';
 import code_icon_dark from './code-icon-dark.png';
 import edu_icon from './edu-icon.png';
 import edu_icon_dark from './edu-icon-dark.png';
@@ -38,7 +38,7 @@ import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 
 export const assets = {
     user_image,
-    code_icon,
+    publications_icon,
     code_icon_dark,
     edu_icon,
     edu_icon_dark,
@@ -107,11 +107,76 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+  { 
+    icon: assets.edu_icon, 
+    iconDark: assets.edu_icon_dark, 
+    title: 'Education', 
+    description: 'B.Sc. in Computer Science and Engineering' 
+  },
+  { 
+    icon: assets.publications_icon, 
+    iconDark: assets.code_icon_dark, 
+    title: 'Publications', 
+    description: [
+      {
+        title: 'Nursing Robot (IEEE Conference)',
+        link: 'https://ieeexplore.ieee.org/document/10392259/'
+      },
+      {
+        title: 'IP Security Case Study',
+        link: 'https://www.researchgate.net/publication/373832770_A_Case_Study_on_IP_Security_CSE_406_Cryptography_and_Network_Security'
+      }
+    ]
+  },
+  { 
+    icon: assets.project_icon, 
+    iconDark: assets.project_icon_dark, 
+    title: 'Projects', 
+    description: '6+ Porjects' 
+  }
 ];
 
 export const toolsData = [
     assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
 ];
+
+export const skillCategories = [
+    {
+      emoji: '💪',
+      label: 'Strengths',
+      skills: [
+        { name: 'ReactJS', icon: '🅰️' },
+        { name: 'TailwindCSS', icon: '🌊' },
+        { name: 'NextJS', icon: '⚛️' },
+        { name: 'Node.js', icon: '📗' },
+        { name: 'MongoDB', icon: '🍃' },
+        { name: 'GitHub', icon: '🐙' },
+      ]
+    },
+    {
+      emoji: '✊',
+      label: 'Advanced',
+      skills: [
+        { name: 'Express.js', icon: '⚡' },
+        { name: 'RxJS', icon: '🔮' },
+        { name: 'PostgreSQL', icon: '🐘' },
+        { name: 'MySQL', icon: '🐬' },
+        { name: 'Prisma', icon: '▲' },
+        { name: 'Redis', icon: '📦' },
+        { name: 'Git', icon: '🔀' },
+      ]
+    },
+    {
+      emoji: '👍',
+      label: 'Familiar',
+      skills: [
+        { name: 'NgRx', icon: '🔄' },
+        { name: 'Socket.IO', icon: '⚡' },
+        { name: 'Auth0', icon: '🔐' },
+        { name: '.NET Core', icon: '🟣' },
+        { name: 'React', icon: '⚛️' },
+        { name: 'Leaflet', icon: '🗺️' },
+        { name: 'Capacitor', icon: '📱' },
+      ]
+    }
+  ];

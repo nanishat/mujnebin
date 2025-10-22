@@ -3,13 +3,13 @@ import { motion } from 'motion/react'
 import Image from 'next/image'
 import React from 'react'
 
-const Work = ({ isDarkMode }) => {
+const Projects = ({ isDarkMode }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      id='work' className='w-full px-[12%] py-10 scroll-mt-20 mt-20 mb-20'
+      id='projects' className='w-full px-[12%] py-10 scroll-mt-20 mt-20 mb-20'
     >
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
@@ -82,4 +82,4 @@ const Work = ({ isDarkMode }) => {
   )
 }
 
-export default Work
+export default Projects
