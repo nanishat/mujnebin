@@ -48,7 +48,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className='max-w-2xl mx-auto font-Ovo'
       >
-        I am a frontend developer from Dhaka, Bangladesh with 1 year of experience in multiple projects.
+        I’m a Full Stack Engineer from Dhaka, Bangladesh, with 1.5+ years of experience building and deploying impactful web applications across multiple projects.
       </motion.p>
 
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
@@ -67,7 +67,8 @@ const Header = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          href="#mujnebin-resume.pdf" download
+          href="/mujnebin-resume.pdf"
+          download="mujnebin-resume.pdf"
           className='px-10 py-3 border rounded-full border-grey-500 flex items-center gap-2 bg-white dark:text-black'
         >
           My resume

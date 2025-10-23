@@ -1,6 +1,6 @@
 import user_image from './user-image.png';
 import publications_icon from './publications-icon.png';
-import code_icon_dark from './code-icon-dark.png';
+import publications_icon_dark from './publications-icon-dark.png';
 import edu_icon from './edu-icon.png';
 import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
@@ -39,7 +39,7 @@ import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 export const assets = {
     user_image,
     publications_icon,
-    code_icon_dark,
+    publications_icon_dark,
     edu_icon,
     edu_icon_dark,
     project_icon,
@@ -115,7 +115,7 @@ export const infoList = [
   },
   { 
     icon: assets.publications_icon, 
-    iconDark: assets.code_icon_dark, 
+    iconDark: assets.publications_icon_dark, 
     title: 'Publications', 
     description: [
       {
