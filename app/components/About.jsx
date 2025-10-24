@@ -51,7 +51,7 @@ const About = ({ isDarkMode }) => {
           className='flex-1'
         >
           <p className='mb-10 max-w-2xl font-Ovo'>
-            I'm a passionate Full Stack Developer focused on building clean, scalable, and user-centric web applications. I take pride in my problem-solving abilities, which empower me to tackle challenges head-on. My insatiable thirst for knowledge drives me to continuously learn and grow in the ever-evolving tech landscape and work with cutting-edge technologies. I specialize in <span className='text-[#F87171]'>React.js, Next.js</span> and <span className='text-[#F87171]'>TailwindCSS</span> on the <span className='text-[#F87171]'>frontend,</span>, and <span className='text-[#5AEECC]'>Node.js</span> and <span className='text-[#5AEECC]'>Express.js</span> on the <span className='text-[#5AEECC]'>backend</span>. Also I'm used to working with Version Control platforms like <span className='text-[#FBBC04]'>Git, Github</span> and <span className='text-[#FBBC04]'>GitLab</span>. Let's create exceptional digital experiences together!
+            I'm a passionate Full Stack Developer focused on building clean, scalable, and user-centric web applications. I take pride in my problem-solving abilities, which empower me to tackle challenges head-on. My insatiable thirst for knowledge drives me to continuously learn and grow in the ever-evolving tech landscape and work with cutting-edge technologies. I specialize in <span className='text-[#F87171]'>React.js, Next.js</span> and <span className='text-[#F87171]'>TailwindCSS</span> on the <span className='text-[#F87171]'>frontend,</span>, and <span className='text-[#5AEECC]'>Node.js</span> and <span className='text-[#5AEECC]'>Express.js</span> on the <span className='text-[#5AEECC]'>backend</span>. Also I'm used to working with Version Control platforms like <span className='text-[#C084FC]'>Git, Github</span> and <span className='text-[#C084FC]'>GitLab</span>. Let's create exceptional digital experiences together!
           </p>
 
           <motion.ul
@@ -64,12 +64,12 @@ const About = ({ isDarkMode }) => {
               <motion.li
                 whileHover={{ scale: 1.05 }}
                 key={index}
-                className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer
-                 hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black
-                 dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50'
+                className='border-[0.5px] border-arsenic rounded-xl p-6 cursor-pointer
+                 hover:bg-lightHover/50 hover:-translate-y-1 duration-500 shadow-md hover:shadow-lg hover:shadow-richBlack
+                 dark:border-chineseWhite dark:hover:shadow-chineseWhite dark:hover:bg-darkHover/50'
               >
                 <Image src={isDarkMode ? item.iconDark : item.icon} alt={item.title} className='w-7 mt-7' />
-                <h3 className='my-4 font-semibold text-gray-700 dark:text-white'>{item.title}</h3>
+                <h3 className='my-4 font-semibold'>{item.title}</h3>
 
                 {typeof item.description === 'string' ? (
                   <p className='text-gray-600 text-sm dark:text-white/80'>{item.description}</p>
@@ -81,7 +81,7 @@ const About = ({ isDarkMode }) => {
                         href={research.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className='block hover:text-blue-500 dark:hover:text-blue-400 transition-colors'
+                        className='block hover:text-tigerEye dark:hover:text-chineseRed transition-colors'
                       >
                         {research.title}
                       </a>

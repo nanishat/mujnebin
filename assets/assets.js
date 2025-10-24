@@ -78,8 +78,8 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'Chatbot',
+        description: 'Chatbot Web App',
         bgImage: '/work-1.png',
     },
     {
@@ -145,38 +145,38 @@ export const skillCategories = [
       emoji: '💪',
       label: 'Strengths',
       skills: [
-        { name: 'ReactJS', icon: '🅰️' },
-        { name: 'TailwindCSS', icon: '🌊' },
-        { name: 'NextJS', icon: '⚛️' },
-        { name: 'Node.js', icon: '📗' },
-        { name: 'MongoDB', icon: '🍃' },
-        { name: 'GitHub', icon: '🐙' },
+        { name: 'ReactJS', icon: assets.git },
+        { name: 'TailwindCSS', icon: assets.git },
+        { name: 'NextJS', icon: assets.git },
+        { name: 'Node.js', icon: assets.git },
+        { name: 'MongoDB', icon: assets.git },
+        { name: 'GitHub', icon: assets.git },
       ]
     },
     {
       emoji: '✊',
       label: 'Advanced',
       skills: [
-        { name: 'Express.js', icon: '⚡' },
-        { name: 'RxJS', icon: '🔮' },
-        { name: 'PostgreSQL', icon: '🐘' },
-        { name: 'MySQL', icon: '🐬' },
-        { name: 'Prisma', icon: '▲' },
-        { name: 'Redis', icon: '📦' },
-        { name: 'Git', icon: '🔀' },
+        { name: 'Express.js', icon: assets.git },
+        { name: 'RxJS', icon: assets.git },
+        { name: 'PostgreSQL', icon: assets.git },
+        { name: 'MySQL', icon: assets.git },
+        { name: 'Prisma', icon: assets.git },
+        { name: 'Redis', icon: assets.git },
+        { name: 'Git', icon: assets.git },
       ]
     },
     {
       emoji: '👍',
       label: 'Familiar',
       skills: [
-        { name: 'NgRx', icon: '🔄' },
-        { name: 'Socket.IO', icon: '⚡' },
-        { name: 'Auth0', icon: '🔐' },
-        { name: '.NET Core', icon: '🟣' },
-        { name: 'React', icon: '⚛️' },
-        { name: 'Leaflet', icon: '🗺️' },
-        { name: 'Capacitor', icon: '📱' },
+        { name: 'NgRx', icon: assets.git },
+        { name: 'Socket.IO', icon: assets.git },
+        { name: 'Auth0', icon: assets.git },
+        { name: '.NET Core', icon: assets.git },
+        { name: 'React', icon: assets.git },
+        { name: 'Leaflet', icon: assets.git },
+        { name: 'Capacitor', icon: assets.git },
       ]
     }
   ];

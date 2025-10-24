@@ -13,14 +13,14 @@ const ovo = Ovo({
 
 export const metadata = {
   title: "S Mujnebin",
-  description: "Persistent by nature, driven by results.",
+  description: "Persistent by nature, driven by results",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
+        className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden bg-chineseWhite text-richBlack dark:bg-richBlack dark:text-chineseWhite`}
       >
         {children}
       </body>

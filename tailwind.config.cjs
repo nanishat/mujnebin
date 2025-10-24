@@ -9,9 +9,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        lightHover: '#fcf4ff',
-        darkHover: '#2a004a',
-        darkTheme: '#11001F',
+        richBlack: '#07111D',
+        arsenic: '#39444D',
+        davyGray: '#5D5D5D',
+        chineseWhite: '#E5E5DF',
+        tigerEye: '#DB9941',
+        chineseRed: '#AE2C11',
+        lightHover: '#E5E5E5',
+        darkHover: '#39444D',
+        darkTheme: '#07111D',
       },
       fontFamily: {
         Outfit: ["Outfit", "sans-serif"],
