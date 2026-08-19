@@ -18,14 +18,14 @@ const Skills = () => {
 
       <div className="max-w-7xl mx-auto space-y-8">
         {skillCategories.map((category, index) => (
-          <div key={index} className="flex items-start gap-6">
-            <div className="flex flex-col items-center min-w-[120px]">
+          <div key={index} className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-6">
+            <div className="flex flex-col items-center w-full lg:w-auto lg:min-w-[120px]">
               <div className="text-5xl mb-2 cursor-pointer">{category.emoji}</div>
               <div className="text-lg font-semibold font-Ovo">{category.label}</div>
             </div>
 
-            <div className="flex-1 border border-arsenic dark:border-chineseWhite rounded-2xl p-8 shadow-sm">
-              <div className="flex flex-wrap gap-12 justify-center">
+            <div className="w-full min-w-0 lg:flex-1 border border-arsenic dark:border-chineseWhite rounded-2xl p-4 sm:p-6 lg:p-8 shadow-sm">
+              <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:flex sm:flex-wrap sm:gap-8 lg:gap-12 justify-items-center sm:justify-center">
                 {category.skills.map((skill, index) => (
                   <div
                     key={index}

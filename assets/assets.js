@@ -149,7 +149,7 @@ export const skillCategories = [
         { name: 'TailwindCSS', icon: assets.git },
         { name: 'NextJS', icon: assets.git },
         { name: 'Node.js', icon: assets.git },
-        { name: 'MongoDB', icon: assets.git },
+        { name: 'PostgreSQL', icon: assets.git },
         { name: 'GitHub', icon: assets.git },
       ]
     },
