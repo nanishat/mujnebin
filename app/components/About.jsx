@@ -51,7 +51,7 @@ const About = ({ isDarkMode }) => {
           className='flex-1'
         >
           <p className='mb-10 max-w-2xl font-Ovo'>
-            I'm a passionate Full Stack Developer focused on building clean, scalable, and user-centric web applications. I take pride in my problem-solving abilities, which empower me to tackle challenges head-on. My insatiable thirst for knowledge drives me to continuously learn and grow in the ever-evolving tech landscape and work with cutting-edge technologies. I specialize in <span className='text-[#F87171]'>React.js, Next.js</span> and <span className='text-[#F87171]'>TailwindCSS</span> on the <span className='text-[#F87171]'>frontend,</span>, and <span className='text-[#5AEECC]'>Node.js</span> and <span className='text-[#5AEECC]'>Express.js</span> on the <span className='text-[#5AEECC]'>backend</span>. Also I'm used to working with Version Control platforms like <span className='text-[#C084FC]'>Git, Github</span> and <span className='text-[#C084FC]'>GitLab</span>. Let's create exceptional digital experiences together!
+            I started coding at the beginning of my university career and completed a six-month internship with BRAC's Skills Development Programme (SDP). There, I built a field information collection web application with cascading, multi-layer filtering that supported BRAC's existing system and reached 400+ users across 370+ branches. I currently work at Protection One Pvt. Ltd. as an in-house Software Developer, building an ERP solution from scratch with <span className='text-[#F87171]'>Next.js, PostgreSQL</span> and <span className='text-[#5AEECC]'>Docker</span>. My long-term goal is to build technology that creates meaningful impact and adds real value to people's work and lives.
           </p>
 
           <motion.ul
@@ -66,18 +66,33 @@ const About = ({ isDarkMode }) => {
                 key={index}
                 className='border-[0.5px] border-arsenic rounded-xl p-6 cursor-pointer
                  hover:bg-lightHover/50 hover:-translate-y-1 duration-500 shadow-md hover:shadow-lg hover:shadow-richBlack
-                 dark:border-chineseWhite dark:hover:shadow-chineseWhite dark:hover:bg-darkHover/50'
+                 dark:border-chineseWhite dark:hover:shadow-chineseWhite dark:hover:bg-darkHover/50 min-w-0'
               >
                 <Image src={isDarkMode ? item.iconDark : item.icon} alt={item.title} className='w-7 mt-7' />
-                <h3 className='my-4 font-semibold'>{item.title}</h3>
+                <h3 className='my-4 font-semibold break-words'>{item.title}</h3>
 
-                {typeof item.description === 'string' ? (
-                  <p className='text-gray-600 text-sm dark:text-white/80'>{item.description}</p>
-                ) : (
+                {item.period && <p className='mb-3 text-sm font-semibold'>{item.period}</p>}
+
+                {item.kpis && (
+                  <div className='grid grid-cols-3 gap-2 mb-4'>
+                    {item.kpis.map((kpi) => (
+                      <div key={kpi.label}>
+                        <p className='text-lg font-semibold leading-tight'>{kpi.value}</p>
+                        <p className='text-xs leading-4 text-gray-600 dark:text-white/80'>{kpi.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {item.description && <p className='text-gray-600 text-sm dark:text-white/80'>{item.description}</p>}
+
+                {item.stack && <p className='mt-3 text-sm font-medium'>{item.stack}</p>}
+
+                {item.publications && (
                   <div className='text-gray-600 text-sm dark:text-white/80 space-y-2'>
-                    {item.description.map((research, idx) => (
+                    {item.publications.map((research) => (
                       <a
-                        key={idx}
+                        key={research.title}
                         href={research.link}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -88,6 +103,8 @@ const About = ({ isDarkMode }) => {
                     ))}
                   </div>
                 )}
+
+                {item.projectCount && <p className='mt-3 text-sm font-medium'>{item.projectCount}</p>}
               </motion.li>
             ))}
           </motion.ul>

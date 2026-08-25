@@ -108,32 +108,42 @@ export const serviceData = [
 
 export const infoList = [
   {
-    icon: assets.edu_icon,
-    iconDark: assets.edu_icon_dark,
-    title: 'Education',
-    description: 'B.Sc. in Computer Science and Engineering'
-  },
-  {
     icon: assets.publications_icon,
     iconDark: assets.publications_icon_dark,
-    title: 'Publications',
-    description: [
+    title: 'BRAC SDP',
+    period: '6 Months',
+    kpis: [
+      { value: '400+', label: 'Users Impacted' },
+      { value: '370+', label: 'Branches Supported' },
+      { value: '60%', label: 'Less Submission Time' }
+    ],
+    description: 'Built a field data collection web app using cascading, multi-layer filtering to improve reporting and integration with the existing system.'
+  },
+  {
+    icon: assets.project_icon,
+    iconDark: assets.project_icon_dark,
+    title: 'Protection One',
+    period: 'Software Developer',
+    description: 'Building an in-house ERP solution from scratch for business operations.',
+    stack: 'Next.js · PostgreSQL · Docker'
+  },
+  {
+    icon: assets.edu_icon,
+    iconDark: assets.edu_icon_dark,
+    title: 'Independent University, Bangladesh',
+    period: 'B.Sc. in Computer Science and Engineering',
+    publications: [
       {
-        title: 'Nursing Robot (IEEE Conference)',
+        title: 'Nursing Robot — IEEE Conference',
         link: 'https://ieeexplore.ieee.org/document/10392259/'
       },
       {
         title: 'IP Security Case Study',
         link: 'https://www.researchgate.net/publication/373832770_A_Case_Study_on_IP_Security_CSE_406_Cryptography_and_Network_Security'
       }
-    ]
+    ],
+    projectCount: '6+ Projects'
   },
-  {
-    icon: assets.project_icon,
-    iconDark: assets.project_icon_dark,
-    title: 'Projects',
-    description: '6+ Porjects'
-  }
 ];
 
 export const toolsData = [
