@@ -9,6 +9,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        paper: '#FBF9F5',
+        ink: '#18181B',
+        accent: '#E27355',
+        accentSoft: '#F0A07E',
+        slate2: '#64748B',
         richBlack: '#07111D',
         arsenic: '#39444D',
         davyGray: '#5D5D5D',
