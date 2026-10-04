@@ -146,6 +146,48 @@ export const infoList = [
   },
 ];
 
+export const experienceData = [
+  {
+    id: 'protection-one',
+    role: 'Software Developer',
+    org: 'Protection One',
+    period: '',
+    type: 'work',
+    bullets: [
+      'Building an in-house ERP solution from scratch for business operations'
+    ],
+    tech: ['Next.js', 'PostgreSQL', 'Docker']
+  },
+  {
+    id: 'brac-sdp',
+    role: 'BRAC SDP',
+    org: 'BRAC SDP',
+    period: '6 Months',
+    type: 'work',
+    bullets: [
+      '400+ users impacted',
+      '370+ branches supported',
+      '60% less submission time',
+      'Built a field data collection web app using cascading, multi-layer filtering',
+      'Improved reporting and integration with the existing system'
+    ],
+    tech: []
+  },
+  {
+    id: 'independent-university-bangladesh',
+    role: 'B.Sc. in Computer Science and Engineering',
+    org: 'Independent University, Bangladesh',
+    period: '',
+    type: 'education',
+    bullets: [
+      'Nursing Robot — IEEE Conference',
+      'IP Security Case Study',
+      '6+ Projects'
+    ],
+    tech: []
+  }
+];
+
 export const toolsData = [
   assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
 ];
