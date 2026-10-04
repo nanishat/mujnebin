@@ -47,6 +47,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           ${isScroll ? "" : "shadow-sm bg-opacity-50 dark:border dark:border-arsenic dark:bg-transparent"} `}>
           <li><a className='font-Ovo' href="#top">Home</a></li>
           <li><a className='font-Ovo' href="#about">About me</a></li>
+          <li><a className='font-Ovo' href="#experience">Experience</a></li>
           <li><a className='font-Ovo' href="#skills">Skills</a></li>
           <li><a className='font-Ovo' href="#projects">Projects</a></li>
           <li><a className='font-Ovo' href="#contact">Contact me</a></li>
@@ -89,6 +90,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
           <li><a className='font-Ovo' onClick={closeMenu} href="#top">Home</a></li>
           <li><a className='font-Ovo' onClick={closeMenu} href="#about">About me</a></li>
+          <li><a className='font-Ovo' onClick={closeMenu} href="#experience">Experience</a></li>
           <li><a className='font-Ovo' onClick={closeMenu} href="#skills">Skills</a></li>
           <li><a className='font-Ovo' onClick={closeMenu} href="#projects">Projects</a></li>
           <li><a className='font-Ovo' onClick={closeMenu} href="#contact">Contact me</a></li>

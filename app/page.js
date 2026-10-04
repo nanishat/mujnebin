@@ -36,8 +36,8 @@ export default function Home() {
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Header isDarkMode={isDarkMode} />
       <About isDarkMode={isDarkMode} />
-      <Skills isDarkMode={isDarkMode} />
       <Experience />
+      <Skills isDarkMode={isDarkMode} />
       <Projects isDarkMode={isDarkMode} />
       <Contact isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
