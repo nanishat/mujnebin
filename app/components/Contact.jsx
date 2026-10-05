@@ -47,7 +47,7 @@ const Contact = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className='flex flex-col justify-center rounded-2xl border border-neutral-200/80 bg-[#18181B] p-8 text-white shadow-sm md:p-12'
         >
-          <p className='mb-3 font-medium text-[#E27355]'>Connect with me</p>
+          <p className='mb-3 font-medium text-[#E27355]'>Let's Talk</p>
           <h2 className='text-4xl font-Ovo tracking-tight md:text-5xl'>Get in touch</h2>
           <p className='mt-5 max-w-lg font-Ovo leading-relaxed text-neutral-300'>
             I'd love to hear from you! If you have any questions, comment or feedback, please use the form below.

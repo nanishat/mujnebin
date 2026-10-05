@@ -192,6 +192,32 @@ export const skillCategories = [
       { name: 'Leaflet', icon: assets.git },
       { name: 'Capacitor', icon: assets.git },
     ]
+  },
+  {
+    emoji: '👍',
+    label: 'Familiar',
+    skills: [
+      { name: 'NgRx', icon: assets.git },
+      { name: 'Socket.IO', icon: assets.git },
+      { name: 'Auth0', icon: assets.git },
+      { name: '.NET Core', icon: assets.git },
+      { name: 'React', icon: assets.git },
+      { name: 'Leaflet', icon: assets.git },
+      { name: 'Capacitor', icon: assets.git },
+    ]
+  },
+  {
+    emoji: '👍',
+    label: 'Familiar',
+    skills: [
+      { name: 'NgRx', icon: assets.git },
+      { name: 'Socket.IO', icon: assets.git },
+      { name: 'Auth0', icon: assets.git },
+      { name: '.NET Core', icon: assets.git },
+      { name: 'React', icon: assets.git },
+      { name: 'Leaflet', icon: assets.git },
+      { name: 'Capacitor', icon: assets.git },
+    ]
   }
 ];
 
