@@ -5,3 +5,35 @@
 * {
   font-family: Outfit;
 }
+
+.profile-ring {
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 9999px;
+}
+
+.profile-ring::before {
+  position: absolute;
+  inset: 0;
+  border: 2px dashed rgb(163 163 163 / 0.8);
+  border-radius: inherit;
+  content: '';
+  animation: profile-ring-spin 25s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes profile-ring-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-ring::before {
+    animation: none;
+  }
+}
