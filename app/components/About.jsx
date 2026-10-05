@@ -1,116 +1,113 @@
-import { assets, infoList, toolsData } from '@/assets/assets'
 import { motion } from 'motion/react'
-import Image from 'next/image'
-import React from 'react'
 
-const About = ({ isDarkMode }) => {
+const About = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      id='about' className='w-full px-[12%] py-10 scroll-mt-20'
+    <motion.section
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      id='about'
+      className='mx-auto max-w-6xl px-4 py-10 md:px-8 md:py-20'
     >
-      <motion.h4
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className='text-center mb-2 text-lg font-Ovo'
-      >
-        Introduction
-      </motion.h4>
+      <h2 className='mb-8 text-center text-4xl font-Ovo md:mb-10 md:text-5xl'>
+        About me
+      </h2>
 
-      <motion.h2
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className='text-center text-5xl font-Ovo'
-      >
-        About Me
-      </motion.h2>
+      <div className='grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-8'>
+        <article className='rounded-3xl bg-ink p-6 text-white md:p-10 lg:col-span-8'>
+          <div className='space-y-7'>
+            <div>
+              <p className='mb-2 font-mono text-xs uppercase tracking-wider text-white/60'>
+                Where I started
+              </p>
+              <p className='font-Ovo leading-relaxed text-white/90'>
+                I started coding at the beginning of my university career and
+                completed a six-month internship with BRAC&apos;s Skills
+                Development Programme (SDP). There, I built a field information
+                collection web application with cascading, multi-layer
+                filtering that supported BRAC&apos;s existing system and
+                reached 400+ users across 370+ branches.
+              </p>
+            </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'
-      >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className='w-64 sm:w-80 rounded-3xl max-w-none'
-        >
-          <Image src={assets.user_image} alt='user' className='w-full rounded-3xl' />
-        </motion.div>
+            <div>
+              <p className='mb-2 font-mono text-xs uppercase tracking-wider text-white/60'>
+                What I build
+              </p>
+              <p className='font-Ovo leading-relaxed text-white/90'>
+                I currently work at Protection One Pvt. Ltd. as an in-house
+                Software Developer, building an ERP solution from scratch with{' '}
+                <span className='text-[#F87171]'>Next.js, PostgreSQL</span> and{' '}
+                <span className='text-[#5AEECC]'>Docker</span>.
+              </p>
+            </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className='flex-1'
-        >
-          <p className='mb-10 max-w-2xl font-Ovo'>
-            I started coding at the beginning of my university career and completed a six-month internship with BRAC's Skills Development Programme (SDP). There, I built a field information collection web application with cascading, multi-layer filtering that supported BRAC's existing system and reached 400+ users across 370+ branches. I currently work at Protection One Pvt. Ltd. as an in-house Software Developer, building an ERP solution from scratch with <span className='text-[#F87171]'>Next.js, PostgreSQL</span> and <span className='text-[#5AEECC]'>Docker</span>. My long-term goal is to build technology that creates meaningful impact and adds real value to people's work and lives.
-          </p>
+            <div>
+              <p className='mb-2 font-mono text-xs uppercase tracking-wider text-white/60'>
+                Where I&apos;m heading
+              </p>
+              <p className='font-Ovo leading-relaxed text-white/90'>
+                My long-term goal is to build technology that creates meaningful
+                impact and adds real value to people&apos;s work and lives.
+              </p>
+            </div>
+          </div>
+        </article>
 
-          <motion.ul
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'
-          >
-            {infoList.map((item, index) => (
-              <motion.li
-                whileHover={{ scale: 1.05 }}
-                key={index}
-                className='border-[0.5px] border-arsenic rounded-xl p-6 cursor-pointer
-                 hover:bg-lightHover/50 hover:-translate-y-1 duration-500 shadow-md hover:shadow-lg hover:shadow-richBlack
-                 dark:border-chineseWhite dark:hover:shadow-chineseWhite dark:hover:bg-darkHover/50 min-w-0'
+        <aside className='rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm dark:bg-transparent md:p-8 lg:col-span-4'>
+          <h3 className='mb-6 font-Ovo text-xl'>Journey</h3>
+          <ol className='space-y-5'>
+            <li>
+              <p className='font-mono text-xs text-neutral-500 dark:text-chineseWhite/70'>
+                Education
+              </p>
+              <p className='text-sm'>
+                B.Sc. in Computer Science and Engineering
+              </p>
+            </li>
+            <li>
+              <p className='font-mono text-xs text-neutral-500 dark:text-chineseWhite/70'>
+                First role
+              </p>
+              <p className='text-sm'>BRAC SDP · 6-month internship</p>
+            </li>
+            <li>
+              <p className='font-mono text-xs text-neutral-500 dark:text-chineseWhite/70'>
+                Publication
+              </p>
+              <a
+                href='https://ieeexplore.ieee.org/document/10392259/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-sm transition-colors hover:text-[#E27355]'
               >
-                <Image src={isDarkMode ? item.iconDark : item.icon} alt={item.title} className='w-7 mt-7' />
-                <h3 className='my-4 font-semibold break-words'>{item.title}</h3>
-
-                {item.period && <p className='mb-3 text-sm font-semibold'>{item.period}</p>}
-
-                {item.kpis && (
-                  <div className='grid grid-cols-3 gap-2 mb-4'>
-                    {item.kpis.map((kpi) => (
-                      <div key={kpi.label}>
-                        <p className='text-lg font-semibold leading-tight'>{kpi.value}</p>
-                        <p className='text-xs leading-4 text-gray-600 dark:text-white/80'>{kpi.label}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {item.description && <p className='text-gray-600 text-sm dark:text-white/80'>{item.description}</p>}
-
-                {item.stack && <p className='mt-3 text-sm font-medium'>{item.stack}</p>}
-
-                {item.publications && (
-                  <div className='text-gray-600 text-sm dark:text-white/80 space-y-2'>
-                    {item.publications.map((research) => (
-                      <a
-                        key={research.title}
-                        href={research.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className='block hover:text-tigerEye dark:hover:text-chineseRed transition-colors'
-                      >
-                        {research.title}
-                      </a>
-                    ))}
-                  </div>
-                )}
-
-                {item.projectCount && <p className='mt-3 text-sm font-medium'>{item.projectCount}</p>}
-              </motion.li>
-            ))}
-          </motion.ul>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+                Nursing Robot — IEEE Conference
+              </a>
+            </li>
+            <li>
+              <p className='font-mono text-xs text-neutral-500 dark:text-chineseWhite/70'>
+                Publication
+              </p>
+              <a
+                href='https://www.researchgate.net/publication/373832770_A_Case_Study_on_IP_Security_CSE_406_Cryptography_and_Network_Security'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-sm transition-colors hover:text-[#E27355]'
+              >
+                IP Security Case Study
+              </a>
+            </li>
+            <li>
+              <p className='font-mono text-xs text-neutral-500 dark:text-chineseWhite/70'>
+                Current role
+              </p>
+              <p className='text-sm'>Software Developer · Protection One</p>
+            </li>
+          </ol>
+        </aside>
+      </div>
+    </motion.section>
   )
 }
 

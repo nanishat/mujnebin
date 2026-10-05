@@ -1,4 +1,3 @@
-import user_image from './user-image.png';
 import publications_icon from './publications-icon.png';
 import publications_icon_dark from './publications-icon-dark.png';
 import edu_icon from './edu-icon.png';
@@ -37,7 +36,6 @@ import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 
 export const assets = {
-  user_image,
   publications_icon,
   publications_icon_dark,
   edu_icon,
@@ -81,21 +79,25 @@ export const workData = [
     title: 'Taroworks Troubleshooting Web App',
     description: 'TaroWorks troubleshooting platform for BRAC SDP, serving 400+ field users',
     bgImage: '/ttwf.png',
+    link: 'https://github.com/nanishat/supreme-dollop',
   },
   {
     title: 'Chatbot',
     description: 'Interactive AI chatbot with real-time responses and natural language understanding, providing personalized assistance and engaging conversations.',
     bgImage: '/Chatbot.png',
+    link: 'https://github.com/nanishat/chatbot',
   },
   {
     title: 'Amazon Clone',
     description: 'Amazon-inspired e-commerce platform with robust cart functionality and seamless user experience.',
     bgImage: '/amazon.png',
+    link: 'https://github.com/nanishat/js-amazon-clone',
   },
   {
     title: 'GAME: Rock Paper Scissors',
     description: 'Rock Paper Scissors game with autoplay and scoring system, allowing players to compete against the computer and track their performance over time.',
     bgImage: '/RPS.png',
+    link: 'https://github.com/nanishat/rock-paper-scissors',
   },
 ]
 
@@ -105,46 +107,6 @@ export const serviceData = [
   { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
   { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
 ]
-
-export const infoList = [
-  {
-    icon: assets.publications_icon,
-    iconDark: assets.publications_icon_dark,
-    title: 'BRAC SDP',
-    period: '6 Months',
-    kpis: [
-      { value: '400+', label: 'Users Impacted' },
-      { value: '370+', label: 'Branches Supported' },
-      { value: '60%', label: 'Less Submission Time' }
-    ],
-    description: 'Built a field data collection web app using cascading, multi-layer filtering to improve reporting and integration with the existing system.'
-  },
-  {
-    icon: assets.project_icon,
-    iconDark: assets.project_icon_dark,
-    title: 'Protection One',
-    period: 'Software Developer',
-    description: 'Building an in-house ERP solution from scratch for business operations.',
-    stack: 'Next.js · PostgreSQL · Docker'
-  },
-  {
-    icon: assets.edu_icon,
-    iconDark: assets.edu_icon_dark,
-    title: 'Independent University, Bangladesh',
-    period: 'B.Sc. in Computer Science and Engineering',
-    publications: [
-      {
-        title: 'Nursing Robot — IEEE Conference',
-        link: 'https://ieeexplore.ieee.org/document/10392259/'
-      },
-      {
-        title: 'IP Security Case Study',
-        link: 'https://www.researchgate.net/publication/373832770_A_Case_Study_on_IP_Security_CSE_406_Cryptography_and_Network_Security'
-      }
-    ],
-    projectCount: '6+ Projects'
-  },
-];
 
 export const experienceData = [
   {
@@ -231,4 +193,10 @@ export const skillCategories = [
       { name: 'Capacitor', icon: assets.git },
     ]
   }
+];
+
+export const story = [
+  "I'm Md Safiul Mujnebin, a Computer Science graduate who builds software to understand and solve the real problem behind the requirement. I enjoy turning vague, complex business needs into systems that are clear, reliable, and actually used.",
+  "My work sits at the intersection of engineering, business processes, and execution. I focus on breaking down problems, shaping abstract requirements into structured solutions, and building full-stack tools that create real value. Right now that means a custom in-house ERP, built from scratch at Protection One with React, Next.js, Node.js, and GCP.",
+  "Beyond the technical side, I'm interested in how ideas move from prototype to impact: serving as Treasurer of IUB's CSE club JUKTI, publishing research indexed on IEEE Xplore, and keeping outcomes in focus. When I'm not at the keyboard, you'll find me [hobby], [hobby], or [hobby].",
 ];
