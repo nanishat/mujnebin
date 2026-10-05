@@ -192,6 +192,15 @@ export const skillCategories = [
       { name: 'Git', icon: assets.git },
       { name: 'GitHub', icon: assets.git },
     ]
+  },
+  {
+    label: 'Domain Knowledge',
+    skills: [
+      { name: 'Business Intelligence' },
+      { name: 'Cloud Computing' },
+      { name: 'Network Security' },
+      { name: 'Data Structures & Algorithms' }
+    ]
   }
 ];
 

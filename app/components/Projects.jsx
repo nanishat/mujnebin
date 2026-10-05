@@ -14,7 +14,7 @@ const Projects = ({ isDarkMode }) => {
       className='mx-auto max-w-6xl scroll-mt-20 px-6 py-20 md:scroll-mt-24 md:px-12 md:py-28'
     >
       <p className='mb-2 text-xs font-bold uppercase tracking-widest text-neutral-400'>
-        Portfolio
+        Work I've done
       </p>
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -25,16 +25,6 @@ const Projects = ({ isDarkMode }) => {
       >
         Selected projects
       </motion.h2>
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.7, duration: 0.5 }}
-        className='mb-12 mt-5 max-w-2xl text-neutral-600 dark:text-neutral-400'
-      >
-        Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in frontend development.
-      </motion.p>
 
       <motion.div
         initial={{ opacity: 0 }}

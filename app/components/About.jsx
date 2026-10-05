@@ -11,7 +11,7 @@ const About = () => {
       className='mx-auto max-w-6xl scroll-mt-20 px-6 py-20 md:scroll-mt-24 md:px-12 md:py-28'
     >
       <p className='mb-2 text-xs font-bold uppercase tracking-widest text-neutral-400'>
-        About
+        Who I am
       </p>
       <h2 className='mb-10 text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 md:text-4xl'>
         About me
