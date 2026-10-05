@@ -36,8 +36,8 @@ const Header = () => {
   }, [displayedRole, isDeleting, roleIndex])
 
   return (
-    <section className='flex min-h-[85vh] flex-col justify-center bg-[#FBF9F5] py-16 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 md:py-24'>
-      <div className='mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 md:px-12 lg:grid-cols-12'>
+    <section className='flex min-h-[85vh] flex-col justify-center bg-[#FBF9F5] py-20 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 md:py-28'>
+      <div className='mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 md:px-12 lg:grid-cols-12'>
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}

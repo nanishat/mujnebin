@@ -7,14 +7,17 @@ const Experience = () => {
   return (
     <section
       id='experience'
-      className='mx-auto max-w-6xl scroll-mt-20 px-4 pt-12 pb-12 md:scroll-mt-24 md:px-8 md:pt-16 md:pb-16'
+      className='mx-auto max-w-6xl scroll-mt-20 px-6 py-20 md:scroll-mt-24 md:px-12 md:py-28'
     >
+      <p className='mb-2 text-xs font-bold uppercase tracking-widest text-neutral-400'>
+        Career
+      </p>
       <motion.h2
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className='mb-10 text-center text-5xl font-Ovo'
+        className='mb-10 text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 md:text-4xl'
       >
         Experience
       </motion.h2>

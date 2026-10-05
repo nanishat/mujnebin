@@ -4,7 +4,7 @@ import React from 'react'
 
 const Footer = ({ isDarkMode }) => {
   return (
-    <div className='mt-20'>
+    <footer className='mx-auto mt-20 max-w-6xl px-6 md:px-12'>
       <div className='text-center'>
         <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt='' className='w-36 mx-auto mb-2' />
 
@@ -14,7 +14,7 @@ const Footer = ({ isDarkMode }) => {
         </div>
       </div>
 
-      <div className='text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6'>
+      <div className='mt-12 border-t border-gray-400 py-6 text-center sm:flex sm:items-center sm:justify-between'>
         <p>© 2025 Safiul Mujnebin. All rights reserved.</p>
 
         <ul className='mt-4 flex flex-col items-center justify-center gap-3 sm:mt-0 sm:flex-row'>
@@ -23,7 +23,7 @@ const Footer = ({ isDarkMode }) => {
           <li><a target='_blank' href="https://discord.com/users/702535873450999838" className='flex h-12 min-w-12 items-center justify-center rounded-xl border border-neutral-200/80 px-4 transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-900'>Discord</a></li>
         </ul>
       </div>
-    </div>
+    </footer>
   )
 }
 

@@ -22,7 +22,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       {/* navbar section */}
       <nav className={`w-full fixed top-0 z-50
          ${isScroll ? "bg-paper/80 backdrop-blur border-b border-neutral-200/80 dark:bg-richBlack/80 dark:border-arsenic" : ""}`}>
-        <div className='mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-8'>
+        <div className='mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 md:px-12'>
 
           {/* brand */}
           <a href="#top" aria-label="Mujnebin home">

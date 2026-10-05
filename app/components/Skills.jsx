@@ -4,35 +4,41 @@ import React from 'react';
 
 const Skills = () => {
   return (
-    <section id='skills' className="mx-auto max-w-6xl scroll-mt-20 px-4 pt-12 pb-12 md:scroll-mt-24 md:px-8 md:pt-16 md:pb-16">
-
+    <section
+      id='skills'
+      className='mx-auto max-w-6xl scroll-mt-20 px-6 py-20 md:scroll-mt-24 md:px-12 md:py-28'
+    >
+      <p className='mb-2 text-xs font-bold uppercase tracking-widest text-neutral-400'>
+        Capabilities
+      </p>
       <motion.h2
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className='text-center text-4xl md:text-5xl font-Ovo mb-8 md:mb-10'
+        className='mb-10 text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 md:text-4xl'
       >
-        My skills
+        Technical Skills
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
+      <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4'>
         {skillCategories.map((category, index) => (
           <motion.div
-            key={index}
+            key={category.label}
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.08 }}
-            className="rounded-2xl border border-neutral-200/80 bg-white p-4 md:p-6 shadow-sm dark:bg-arsenic"
+            className='h-full rounded-2xl border border-neutral-200/60 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/60'
           >
-            <h3 className="mb-4 text-xl font-semibold font-Ovo text-neutral-900 dark:text-chineseWhite">
-              <span className="mr-2" aria-hidden="true">{category.emoji}</span>
+            <h3 className='mb-4 text-xs font-bold uppercase tracking-wider text-neutral-500'>
               {category.label}
             </h3>
-            <div className="flex flex-wrap gap-1.5">
+            <div className='flex flex-wrap gap-2'>
               {category.skills.map((skill, skillIndex) => (
                 <span
-                  key={skillIndex}
-                  className="rounded-full bg-neutral-100 dark:bg-arsenic px-3 py-1 text-xs text-neutral-700 dark:text-chineseWhite"
+                  key={`${category.label}-${skill.name}-${skillIndex}`}
+                  className='rounded-full border border-neutral-200 bg-white px-3.5 py-1.5 text-xs font-medium text-neutral-700 shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300'
                 >
                   {skill.name}
                 </span>
