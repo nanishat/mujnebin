@@ -1,43 +1,44 @@
 import { skillCategories } from '@/assets/assets';
 import { motion } from 'motion/react'
 import React from 'react';
-import Image from 'next/image';
 
 const Skills = () => {
   return (
-    <div id='skills' className="min-h-screen py-[10rem] px-4">
+    <div id='skills' className="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-20">
 
       <motion.h2
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-        className='text-center text-5xl font-Ovo mb-10'
+        transition={{ duration: 0.5 }}
+        className='text-center text-4xl md:text-5xl font-Ovo mb-8 md:mb-10'
       >
         My skills
       </motion.h2>
 
-      <div className="max-w-7xl mx-auto space-y-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
         {skillCategories.map((category, index) => (
-          <div key={index} className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-6">
-            <div className="flex flex-col items-center w-full lg:w-auto lg:min-w-[120px]">
-              <div className="text-5xl mb-2 cursor-pointer">{category.emoji}</div>
-              <div className="text-lg font-semibold font-Ovo">{category.label}</div>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.08 }}
+            className="rounded-2xl border border-neutral-200/80 bg-white p-4 md:p-6 shadow-sm dark:bg-arsenic"
+          >
+            <h3 className="mb-4 text-xl font-semibold font-Ovo text-neutral-900 dark:text-chineseWhite">
+              <span className="mr-2" aria-hidden="true">{category.emoji}</span>
+              {category.label}
+            </h3>
+            <div className="flex flex-wrap gap-1.5">
+              {category.skills.map((skill, skillIndex) => (
+                <span
+                  key={skillIndex}
+                  className="rounded-full bg-neutral-100 dark:bg-arsenic px-3 py-1 text-xs text-neutral-700 dark:text-chineseWhite"
+                >
+                  {skill.name}
+                </span>
+              ))}
             </div>
-
-            <div className="w-full min-w-0 lg:flex-1 border border-arsenic dark:border-chineseWhite rounded-2xl p-4 sm:p-6 lg:p-8 shadow-sm">
-              <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:flex sm:flex-wrap sm:gap-8 lg:gap-12 justify-items-center sm:justify-center">
-                {category.skills.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col items-center gap-2 transition-transform hover:scale-110"
-                  >
-                    <div className="text-4xl cursor-pointer">{<Image src={skill.icon} alt='' />}</div>
-                    <div className="text-sm font-medium text-arsenic dark:text-chineseWhite">{skill.name}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
