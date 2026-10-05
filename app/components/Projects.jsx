@@ -5,17 +5,20 @@ import React from 'react'
 
 const Projects = ({ isDarkMode }) => {
   return (
-    <motion.div
+    <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      id='projects' className='w-full px-4 sm:px-[12%] py-10 scroll-mt-20 mt-20 mb-20'
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      id='projects'
+      className='mx-auto max-w-6xl scroll-mt-20 px-4 py-10 md:px-8 md:py-20'
     >
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ delay: 0.3, duration: 0.5 }}
-        className='text-center mb-2 text-lg font-Ovo'
+        className='mb-2 text-center text-lg font-Ovo'
       >
         My portfolio
       </motion.h4>
@@ -23,6 +26,7 @@ const Projects = ({ isDarkMode }) => {
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ delay: 0.5, duration: 0.5 }}
         className='text-center text-5xl font-Ovo'
       >
@@ -32,8 +36,9 @@ const Projects = ({ isDarkMode }) => {
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
         transition={{ delay: 0.7, duration: 0.5 }}
-        className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'
+        className='mx-auto mb-12 mt-5 max-w-2xl text-center font-Ovo'
       >
         Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in frontend development.
       </motion.p>
@@ -41,44 +46,65 @@ const Projects = ({ isDarkMode }) => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.9, duration: 0.6 }}
-        className='grid grid-cols-1 sm:grid-cols-auto my-10 gap-5 dark:text-black'
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className='my-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'
       >
         {workData.map((project, index) => (
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            key={index}
-            style={{ backgroundImage: `url(${project.bgImage})` }}
-            className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group'
+          <motion.article
+            key={project.title}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.08 }}
+            className='flex flex-col overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-sm dark:bg-transparent'
           >
-            <div className='bg-white w-10/12 max-w-full rounded-md absolute bottom-5 left-1/2 py-3 px-3 sm:px-5 flex items-center justify-between gap-2 -translate-x-1/2 duration-500 group-hover:bottom-7'>
-              <div className='min-w-0'>
-                <h2 className='font-semibold'>{project.title}</h2>
-                <p className='text-sm text-gray-700'>{project.description}</p>
-              </div>
+            <div className='aspect-video overflow-hidden'>
+              <Image
+                src={project.bgImage}
+                alt={project.title}
+                width={640}
+                height={360}
+                className='h-full w-full object-cover transition-transform duration-500 hover:scale-105'
+              />
+            </div>
 
-              <div
-                className='border rounded-full border-black w-9 min-w-9 aspect-square flex items-center justify-center shadow-lightBlack group-hover:bg-lime-300 transition'
-              >
-                <Image src={assets.send_icon} alt='' className='w-5' />
+            <div className='flex flex-1 flex-col p-5'>
+              <h3 className='font-semibold'>{project.title}</h3>
+              <p className='mt-2 line-clamp-2 text-sm text-neutral-600 dark:text-chineseWhite/80'>
+                {project.description}
+              </p>
+
+              <div className='mt-auto flex items-center justify-between border-t border-neutral-200/80 pt-4 dark:border-neutral-700'>
+                <a
+                  href={project.link}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='inline-flex items-center gap-2 text-sm font-medium text-[#E27355] transition-colors hover:text-[#c95f43]'
+                >
+                  View project
+                  <Image src={assets.send_icon} alt='' className='w-4' />
+                </a>
               </div>
             </div>
-          </motion.div>
+          </motion.article>
         ))}
       </motion.div>
 
       <motion.a
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
         transition={{ delay: 1.1, duration: 0.5 }}
-        href="https://github.com/nanishat" target='_blank'
-        className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-5motion.00 dark:text-white dark:border-white dark:hover:bg-darkHover'
+        href='https://github.com/nanishat'
+        target='_blank'
+        rel='noreferrer'
+        className='my-12 flex w-full items-center justify-center gap-2 rounded-full border-[0.5px] border-neutral-700 px-10 py-3 text-neutral-700 transition-colors hover:bg-neutral-100 md:mx-auto md:w-max dark:border-white dark:text-white dark:hover:bg-darkHover'
       >
         Show more
         <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='' className='w-4' />
       </motion.a>
-    </motion.div>
+    </motion.section>
   )
 }
 
