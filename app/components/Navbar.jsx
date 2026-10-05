@@ -33,7 +33,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           <div className='flex items-center gap-2 md:gap-4'>
             <ul className={`hidden md:flex items-center gap-4 lg:gap-8 rounded-full px-6 py-3 lg:px-10
               ${isScroll ? "" : "shadow-sm bg-opacity-50 dark:border dark:border-arsenic dark:bg-transparent"} `}>
-              <li><a className='relative font-Ovo after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-200 hover:after:scale-x-100' href="#top">Home</a></li>
               <li><a className='relative font-Ovo after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-200 hover:after:scale-x-100' href="#about">About me</a></li>
               <li><a className='relative font-Ovo after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-200 hover:after:scale-x-100' href="#experience">Experience</a></li>
               <li><a className='relative font-Ovo after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-200 hover:after:scale-x-100' href="#skills">Skills</a></li>

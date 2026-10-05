@@ -63,14 +63,6 @@ const About = () => {
           <ol className='space-y-5'>
             <li>
               <p className='font-mono text-xs text-neutral-500 dark:text-chineseWhite/70'>
-                Education
-              </p>
-              <p className='text-sm'>
-                B.Sc. in Computer Science and Engineering
-              </p>
-            </li>
-            <li>
-              <p className='font-mono text-xs text-neutral-500 dark:text-chineseWhite/70'>
                 First role
               </p>
               <p className='text-sm'>BRAC SDP · 6-month internship</p>
