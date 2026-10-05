@@ -33,8 +33,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       </div> */}
 
       {/* navbar section */}
-      <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50
-         ${isScroll ? "bg-chineseWhite bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-richBlack dark:shadow-white/20" : ""}`}>
+      <nav className={`w-full fixed top-0 z-50
+         ${isScroll ? "bg-paper/80 backdrop-blur border-b border-neutral-200/80 dark:bg-richBlack/80 dark:border-arsenic" : ""}`}>
+        <div className='mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-8'>
 
         {/* left section */}
         <a
@@ -57,7 +58,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         <div className='flex items-center gap-4'>
 
           {/* dark mode button */}
-          <button onClick={() => setIsDarkMode(prev => !prev)}>
+          <button className='flex min-h-11 min-w-11 items-center justify-center' onClick={() => setIsDarkMode(prev => !prev)}>
             <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='' className='w-6' />
           </button>
 
@@ -69,7 +70,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </a>
 
           {/* menu button for phone screen */}
-          <button className='block md:hidden ml-3' onClick={openMenu}>
+          <button className='ml-3 flex min-h-11 min-w-11 items-center justify-center md:hidden' onClick={openMenu}>
             <Image src={isDarkMode ? assets.menu_white : assets.menu_black} alt='' className='w-6' />
           </button>
         </div>
@@ -82,7 +83,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         >
 
           <div
-            className='absolute right-6 top-6'
+            className='absolute right-6 top-6 flex min-h-11 min-w-11 items-center justify-center'
             onClick={closeMenu}
           >
             <Image src={isDarkMode ? assets.close_white : assets.close_black} alt='' className='w-5 cursor-pointer' />
@@ -95,6 +96,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           <li><a className='font-Ovo' onClick={closeMenu} href="#projects">Projects</a></li>
           <li><a className='font-Ovo' onClick={closeMenu} href="#contact">Contact me</a></li>
         </ul>
+        </div>
       </nav>
     </>
   )
