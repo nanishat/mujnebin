@@ -4,7 +4,7 @@ import React from 'react';
 
 const Skills = () => {
   return (
-    <div id='skills' className="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-20">
+    <section id='skills' className="mx-auto max-w-6xl scroll-mt-20 px-4 pt-12 pb-12 md:scroll-mt-24 md:px-8 md:pt-16 md:pb-16">
 
       <motion.h2
         initial={{ opacity: 0, y: 10 }}
@@ -41,7 +41,7 @@ const Skills = () => {
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

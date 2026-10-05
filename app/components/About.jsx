@@ -8,7 +8,7 @@ const About = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       id='about'
-      className='mx-auto max-w-6xl px-4 py-10 md:px-8 md:py-20'
+      className='mx-auto max-w-6xl scroll-mt-20 px-4 pt-12 pb-12 md:scroll-mt-24 md:px-8 md:pt-16 md:pb-16'
     >
       <h2 className='mb-8 text-center text-4xl font-Ovo md:mb-10 md:text-5xl'>
         About me

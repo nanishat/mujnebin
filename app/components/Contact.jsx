@@ -37,7 +37,7 @@ const Contact = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       id='contact'
-      className='scroll-mt-20 bg-[#FBF9F5] py-10 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 md:py-20'
+      className='scroll-mt-20 bg-[#FBF9F5] pt-12 pb-12 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 md:scroll-mt-24 md:pt-16 md:pb-16'
     >
       <div className='mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 md:px-8 lg:grid-cols-2'>
         <motion.div
