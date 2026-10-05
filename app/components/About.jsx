@@ -110,6 +110,22 @@ const About = () => {
           </ol>
         </aside>
       </div>
+
+      <blockquote className='mt-10 rounded-2xl border border-neutral-200/60 bg-neutral-50 p-6 shadow-xs dark:bg-neutral-900/60 dark:border-neutral-800 md:p-8'>
+        <span className='mb-3 block text-xs font-bold uppercase tracking-widest text-neutral-400'>
+          Leadership endorsement
+        </span>
+        <p className='mb-4 text-base font-medium text-neutral-800 dark:text-neutral-200 italic leading-relaxed md:text-lg'>
+          Safiul successfully led a critical Google Drive &amp; Sheets API
+          integration when documentation was minimal. His initiative, deep
+          R&amp;D, and independent problem-solving mindset delivered a seamless
+          solution. He brings the exact dedication, efficiency, and engineering
+          ownership that drives major projects forward.
+        </p>
+        <footer className='text-sm font-semibold text-neutral-900 dark:text-neutral-100 not-italic'>
+          — Osman Haruni Shin, Deputy Manager at SDP, BRAC
+        </footer>
+      </blockquote>
     </motion.section>
   )
 }
