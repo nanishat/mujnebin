@@ -31,91 +31,67 @@ const Contact = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+    <motion.section
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
       id='contact'
-      className='w-full px-[12%] py-10 scroll-mt-20 mt-20 mb-20 
-      bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'
+      className='scroll-mt-20 bg-[#FBF9F5] py-10 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 md:py-20'
     >
-      <motion.h4
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className='text-center mb-2 text-lg font-Ovo'
-      >
-        Connect with me
-      </motion.h4>
-
-      <motion.h2
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className='text-center text-5xl font-Ovo'
-      >
-        Get in touch
-      </motion.h2>
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
-        className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'
-      >
-        I'd love to hear from you! If you have any questions, comment or feedback, please use the form below.
-      </motion.p>
-
-      <motion.form
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.9 }}
-        onSubmit={onSubmit} className='max-w-2xl mx-auto'
-      >
-
-        <div className='grid grid-cols-auto gap-6 mt-10 mb-8'>
-          <motion.input
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-            name='name' type="text" placeholder='Enter your name' required
-            className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white
-            dark:bg-darkHover/30 dark:border-white/90'
-          />
-          <motion.input
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            name='email' type="email" placeholder='Enter your email' required
-            className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white
-            dark:bg-darkHover/30 dark:border-white/90'
-          />
-        </div>
-
-        <motion.textarea
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.3 }}
-          name='message' rows='6' placeholder='Enter your message' required
-          className='w-full p-4 mb-6 outline-none border-[0.5px] border-gray-400 rounded-md bg-white
-          dark:bg-darkHover/30 dark:border-white/90'
-        ></motion.textarea>
-
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-          type='submit'
-          className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white
-          rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover'
+      <div className='mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 md:px-8 lg:grid-cols-2'>
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className='flex flex-col justify-center rounded-2xl border border-neutral-200/80 bg-[#18181B] p-8 text-white shadow-sm md:p-12'
         >
-          Submit now
-          <Image src={assets.right_arrow_white} alt='' className='w-4' />
-        </motion.button>
+          <p className='mb-3 font-medium text-[#E27355]'>Connect with me</p>
+          <h2 className='text-4xl font-Ovo tracking-tight md:text-5xl'>Get in touch</h2>
+          <p className='mt-5 max-w-lg font-Ovo leading-relaxed text-neutral-300'>
+            I'd love to hear from you! If you have any questions, comment or feedback, please use the form below.
+          </p>
+        </motion.div>
 
-        <p className='mt-4'>{result}</p>
+        <motion.form
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          onSubmit={onSubmit}
+          className='rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm md:p-8 dark:border-neutral-800 dark:bg-neutral-900'
+        >
+          <div className='mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2'>
+            <input
+              name='name' type="text" placeholder='Enter your name' required
+              className='h-11 w-full rounded-xl border border-neutral-300 bg-transparent px-4 outline-none transition-colors focus:border-[#E27355] dark:border-neutral-700 dark:bg-darkHover/30'
+            />
+            <input
+              name='email' type="email" placeholder='Enter your email' required
+              className='h-11 w-full rounded-xl border border-neutral-300 bg-transparent px-4 outline-none transition-colors focus:border-[#E27355] dark:border-neutral-700 dark:bg-darkHover/30'
+            />
+          </div>
 
-      </motion.form>
-    </motion.div>
+          <textarea
+            name='message' rows='6' placeholder='Enter your message' required
+            className='mb-6 w-full rounded-xl border border-neutral-300 bg-transparent p-4 outline-none transition-colors focus:border-[#E27355] dark:border-neutral-700 dark:bg-darkHover/30'
+          ></textarea>
+
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.2 }}
+            type='submit'
+            className='flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#18181B] px-6 text-white transition-colors hover:bg-neutral-700 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300'
+          >
+            Submit now
+            <Image src={assets.right_arrow_white} alt='' className='w-4' />
+          </motion.button>
+
+          <p className='mt-4 text-sm text-neutral-600 dark:text-neutral-400'>{result}</p>
+        </motion.form>
+      </div>
+    </motion.section>
   )
 }
 
