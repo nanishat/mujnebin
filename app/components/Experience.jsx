@@ -7,7 +7,7 @@ const Experience = () => {
   return (
     <section
       id='experience'
-      className='mx-auto max-w-6xl scroll-mt-20 px-6 py-20 md:scroll-mt-24 md:px-12 md:py-28'
+      className='mx-auto max-w-6xl scroll-mt-20 px-6 py-16 md:scroll-mt-24 md:px-12'
     >
       <p className='mb-2 text-xs font-bold uppercase tracking-widest text-neutral-400'>
         Career
@@ -83,7 +83,7 @@ const Experience = () => {
       </div>
 
       <div className='mt-12 md:mt-16'>
-        <p className='mb-2 text-xs font-bold uppercase tracking-widest text-neutral-400'>
+        <p className='mb-4 block text-xs font-bold uppercase tracking-widest text-neutral-400'>
           ACADEMIC BACKGROUND
         </p>
         <h3 className='mb-6 text-xl font-bold text-neutral-900 dark:text-neutral-100 md:text-2xl'>
@@ -95,7 +95,7 @@ const Experience = () => {
             .map((item) => (
               <article
                 key={item.id}
-                className='rounded-2xl border border-neutral-200/80 bg-white p-5 shadow-sm dark:bg-transparent md:p-8'
+                className='rounded-2xl border border-neutral-200/60 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/60'
               >
                 <div className='flex flex-col gap-2 md:flex-row md:items-start md:justify-between'>
                   <div>
@@ -131,6 +131,46 @@ const Experience = () => {
                 )}
               </article>
             ))}
+        </div>
+
+        <div className='mt-10'>
+          <p className='mb-3 block text-xs font-bold uppercase tracking-widest text-neutral-400'>
+            COMMUNITY &amp; EVENT VOLUNTEERING
+          </p>
+          <div className='space-y-4'>
+            <article className='rounded-2xl border border-neutral-200/60 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/60'>
+              <div className='flex flex-col gap-2 md:flex-row md:items-start md:justify-between'>
+                <div>
+                  <h4 className='font-semibold'>Treasurer &amp; Executive Member</h4>
+                  <p className='mt-1 text-neutral-600 dark:text-chineseWhite/80'>
+                    JUKTI (Official CSE Club of Independent University, Bangladesh)
+                  </p>
+                </div>
+                <p className='w-fit shrink-0 self-end rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400'>
+                  Apr 2021 – Mar 2023 (2 yrs)
+                </p>
+              </div>
+              <ul className='mt-4 list-disc space-y-2 pl-5 text-neutral-600 dark:text-chineseWhite/80'>
+                <li>
+                  Managed financial budgeting, expense tracking, and reporting for department-wide technical workshops and programs.
+                </li>
+                <li>
+                  Coordinated academic events and student–faculty engagement initiatives to promote independent learning.
+                </li>
+              </ul>
+            </article>
+
+            <article className='rounded-2xl border border-neutral-200/60 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/60'>
+              <h4 className='font-semibold'>Academic &amp; Tech Event Volunteer</h4>
+              <ul className='mt-4 list-disc space-y-2 pl-5 text-neutral-600 dark:text-chineseWhite/80'>
+                <li>Organizing Volunteer — Intra IUB Tech Fest (2023)</li>
+                <li>Volunteer — National Hackathon on Frontier Technologies (Feb 2020)</li>
+                <li>Organizing Volunteer — Bangladesh Physics Olympiad at IUB (2020)</li>
+                <li>Event Volunteer — Bangladesh Retail Congress by APEX &amp; BBF (2020)</li>
+                <li>Organizing Volunteer (Runner) — Ascension19 Parliamentary Debate Tournament by IUBDC (2019)</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>

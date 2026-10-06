@@ -96,9 +96,8 @@ const Header = () => {
           </p>
 
           <p className='mt-4 max-w-2xl text-base text-neutral-600 dark:text-neutral-400 md:text-lg'>
-            I’m a Full Stack Engineer from Dhaka, Bangladesh, with 1.5+ years of
-            experience building and deploying impactful web applications across
-            multiple projects.
+            Digital architect crafting cloud-native apps and scalable enterprise solutions.<br />
+            <i>Turning complex technical challenges into efficient, automated software that fuels business growth.</i>
           </p>
 
           <div className='mt-7 flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row sm:flex-wrap'>

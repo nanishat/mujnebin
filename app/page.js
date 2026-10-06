@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
+import Credentials from "./components/Credentials";
 
 export default function Home() {
 
@@ -38,6 +39,7 @@ export default function Home() {
       <Experience />
       <Skills isDarkMode={isDarkMode} />
       <Projects isDarkMode={isDarkMode} />
+      <Credentials />
       <Contact isDarkMode={isDarkMode} />
     </div>
   );

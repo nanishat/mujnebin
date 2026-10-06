@@ -46,7 +46,7 @@ const Contact = () => {
       },
       skills: {
         output:
-          'Frontend: React, Next.js\nBackend: Node.js\nDatabase: PostgreSQL',
+          'Frontend: React, Next.js\nBackend: Node.js, Express.js, GCP\nDatabase: PostgreSQL, MySQL',
       },
       contact: { type: 'contact' },
       socials: { type: 'socials' },
