@@ -58,13 +58,28 @@ const Experience = () => {
                 )}
               </div>
 
-              {item.bullets.length > 0 && (
+              {item.sections ? (
+                <div className='mt-5 space-y-5'>
+                  {item.sections.map((section) => (
+                    <div key={section.title}>
+                      <h4 className='font-semibold text-neutral-800 dark:text-neutral-200'>
+                        {section.title}
+                      </h4>
+                      <ul className='mt-2 list-disc space-y-2 pl-5 text-neutral-600 dark:text-chineseWhite/80'>
+                        {section.bullets.map((bullet) => (
+                          <li key={bullet}>{bullet}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              ) : item.bullets.length > 0 ? (
                 <ul className='mt-5 list-disc space-y-2 pl-5 text-neutral-600 dark:text-chineseWhite/80'>
                   {item.bullets.map((bullet) => (
                     <li key={bullet}>{bullet}</li>
                   ))}
                 </ul>
-              )}
+              ) : null}
 
               {item.tech.length > 0 && (
                 <div className='mt-6 flex flex-wrap gap-1.5'>

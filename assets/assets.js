@@ -117,11 +117,26 @@ export const experienceData = [
     employmentType: 'Full-time',
     location: 'Dhaka, Bangladesh',
     type: 'work',
-    bullets: [
-      'Designing and architecting an in-house enterprise resource planning (ERP) platform to streamline company-wide operations.',
-      'Developing secure RESTful backend services, database schemas, and responsive administrative dashboards using Next.js, Prisma, PostgreSQL, and Docker.'
+    sections: [
+      {
+        title: 'Enterprise Resource Planning (ERP) Platform',
+        bullets: [
+          'Architecting an in-house ERP system from scratch using Next.js, Prisma, PostgreSQL, and Docker.',
+          'Gathering operational requirements iteratively from accounting stakeholders, translating business rules into schema models and automated posting workflows.',
+          'Designed and implemented core financial modules, including multi-branch debit vouchers, line-level bank validations, consolidated ledger posting, and bank reconciliation matching.'
+        ]
+      },
+      {
+        title: 'Security Operations & Guard Tracking Platform',
+        bullets: [
+          'Provisioned and hardened a Tenbyte Cloud VM Linux server, configuring Nginx reverse proxy routing, SSH key authentication, and Cloudflare R2 object storage.',
+          'Completed backend deployment, environment configuration, and cPanel cross-origin (CORS) integration to bring the platform live.',
+          'Authored comprehensive developer documentation, source code specs, and bilingual (English & Bengali) user manuals.',
+          'Produced complete video onboarding tutorials for admin and client users using custom scripts and AI voice cloning.'
+        ]
+      }
     ],
-    tech: ['Next.js', 'PostgreSQL', 'Docker', 'Express', 'Prisma', 'Tailwind CSS']
+    tech: ['Next.js', 'PostgreSQL', 'Docker', 'Express.js', 'Prisma', 'Nginx', 'Cloudflare R2', 'Tailwind CSS']
   },
   {
     id: 'brac-sdp',
