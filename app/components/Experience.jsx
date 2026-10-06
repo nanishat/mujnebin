@@ -42,18 +42,17 @@ const Experience = () => {
               <div className='flex flex-col gap-4 md:flex-row md:items-start md:justify-between'>
                 <div className='min-w-0'>
                   <h3 className='font-semibold'>{item.role}</h3>
-                  {item.period && (
-                    <p className='mt-1 w-fit rounded-full bg-neutral-100 px-3 py-1 text-sm font-mono dark:bg-arsenic md:hidden'>
-                      {item.period}
-                    </p>
-                  )}
                   <p className='mt-1 text-neutral-600 dark:text-chineseWhite/80'>
                     {item.org}
+                  </p>
+                  <p className='mt-1 text-sm text-neutral-500 dark:text-neutral-400'>
+                    {item.employmentType} <span aria-hidden='true'>·</span>{' '}
+                    {item.location}
                   </p>
                 </div>
 
                 {item.period && (
-                  <p className='hidden shrink-0 rounded-full bg-neutral-100 px-3 py-1 text-sm font-mono dark:bg-arsenic md:block'>
+                  <p className='w-fit shrink-0 self-end rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400'>
                     {item.period}
                   </p>
                 )}
@@ -85,7 +84,7 @@ const Experience = () => {
 
       <div className='mt-12 md:mt-16'>
         <p className='mb-2 text-xs font-bold uppercase tracking-widest text-neutral-400'>
-          Academic background
+          ACADEMIC BACKGROUND
         </p>
         <h3 className='mb-6 text-xl font-bold text-neutral-900 dark:text-neutral-100 md:text-2xl'>
           Education
@@ -106,7 +105,7 @@ const Experience = () => {
                     </p>
                   </div>
                   {item.period && (
-                    <p className='w-fit rounded-full bg-neutral-100 px-3 py-1 text-sm font-mono dark:bg-arsenic'>
+                    <p className='w-fit shrink-0 self-end rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400'>
                       {item.period}
                     </p>
                   )}
@@ -117,6 +116,18 @@ const Experience = () => {
                       <li key={bullet}>{bullet}</li>
                     ))}
                   </ul>
+                )}
+                {item.tech.length > 0 && (
+                  <div className='mt-6 flex flex-wrap gap-1.5'>
+                    {item.tech.map((technology) => (
+                      <span
+                        key={technology}
+                        className='rounded-full bg-neutral-100 px-3 py-1 text-xs dark:bg-arsenic'
+                      >
+                        {technology}
+                      </span>
+                    ))}
+                  </div>
                 )}
               </article>
             ))}

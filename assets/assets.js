@@ -112,41 +112,59 @@ export const experienceData = [
   {
     id: 'protection-one',
     role: 'Software Developer',
-    org: 'Protection One',
-    period: '',
+    org: 'Protection One (Pvt.) Ltd.',
+    period: 'June 2024 – Present',
+    employmentType: 'Full-time',
+    location: 'Dhaka, Bangladesh',
     type: 'work',
     bullets: [
-      'Building an in-house ERP solution from scratch for business operations'
+      'Designing and architecting an in-house enterprise resource planning (ERP) platform to streamline company-wide operations.',
+      'Developing secure RESTful backend services, database schemas, and responsive administrative dashboards using Next.js, Prisma, PostgreSQL, and Docker.'
     ],
-    tech: ['Next.js', 'PostgreSQL', 'Docker']
+    tech: ['Next.js', 'PostgreSQL', 'Docker', 'Express', 'Prisma', 'Tailwind CSS']
   },
   {
     id: 'brac-sdp',
-    role: 'BRAC SDP',
-    org: 'BRAC SDP',
-    period: '6 Months',
+    role: 'Product & Data Intern',
+    org: 'BRAC — Skills Development Programme (SDP)',
+    period: 'Dec 2025 – May 2026 (6 mos)',
+    employmentType: 'Internship',
+    location: 'Mohakhali, Dhaka, Bangladesh • On-site',
     type: 'work',
     bullets: [
-      '400+ users impacted',
-      '370+ branches supported',
-      '60% less submission time',
-      'Built a field data collection web app using cascading, multi-layer filtering',
-      'Improved reporting and integration with the existing system'
+      'Built and deployed a centralized web-based issue reporting platform deployed across 370+ branches, serving 400+ active users.',
+      'Implemented cascading hierarchy logic to streamline incident tracking, reduce data entry errors, and cut submission times by 60%.',
+      'Engineered custom API workflows integrating attachments into Google Drive with automated response sheet linking.',
+      'Worked with structured datasets across Salesforce and TaroWorks to standardize operational reporting and field data reliability.'
     ],
-    tech: []
+    tech: ['SQL', 'Express.js', 'React', 'Node.js', 'Google Cloud APIs', 'Salesforce']
+  },
+  {
+    id: 'akij-insaf',
+    role: 'Information Technology Assistant (Intern)',
+    org: 'Akij INSAF Ltd.',
+    period: 'Feb 2024 – May 2024 (4 mos)',
+    employmentType: 'Internship',
+    location: 'Dhanmondi, Dhaka, Bangladesh • On-site',
+    type: 'work',
+    bullets: [
+      'Configured Linux-based network infrastructure, DHCP services, and MikroTik router rules across corporate networks.',
+      'Performed structured network diagnostics, hardware security setups, and end-user IT infrastructure support.'
+    ],
+    tech: ['Linux', 'MikroTik', 'Networking', 'DHCP', 'Troubleshooting']
   },
   {
     id: 'independent-university-bangladesh',
     role: 'B.Sc. in Computer Science and Engineering',
-    org: 'Independent University, Bangladesh',
-    period: '',
+    org: 'Independent University, Bangladesh (IUB)',
+    period: 'Graduated Spring 2024',
     type: 'education',
     bullets: [
-      'Nursing Robot — IEEE Conference',
-      'IP Security Case Study',
-      '6+ Projects'
+      'Research & Conference Publication: Nursing Robot — IEEE Conference Paper',
+      'Research Case Study: IP Security Case Study',
+      'Completed 6+ full-stack and systems engineering software projects'
     ],
-    tech: []
+    tech: ['Computer Science', 'Data Structures', 'Web Engineering', 'Software Architecture']
   }
 ];
 
