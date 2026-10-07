@@ -5,12 +5,13 @@ import { motion } from 'motion/react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
-const roles = ['Software Developer', 'Full Stack Engineer', 'Web Architect']
+const roles = ['Software Engineer', 'Full-Stack Developer', 'Data Science Specialist']
 
 const Header = () => {
   const [roleIndex, setRoleIndex] = useState(0)
   const [displayedRole, setDisplayedRole] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
+  const isRoleComplete = displayedRole === roles[roleIndex]
 
   useEffect(() => {
     const currentRole = roles[roleIndex]
@@ -91,8 +92,11 @@ const Header = () => {
             className='mt-2 text-lg font-medium text-neutral-600 dark:text-neutral-400 md:text-xl'
           >
             <span aria-hidden='true'>{displayedRole}</span>
-            <span aria-hidden='true' className='ml-1 inline-block h-5 w-px animate-pulse bg-current align-middle' />
-            <span aria-hidden='true'> • Dhaka, Bangladesh</span>
+            {!isRoleComplete && displayedRole.length > 0 && (
+              <span aria-hidden='true' className='ml-1 inline-block h-5 w-px animate-pulse bg-current align-middle' />
+            )}
+            <span aria-hidden='true' className='mx-2 opacity-40'>•</span>
+            <span aria-hidden='true'>Dhaka, Bangladesh</span>
           </p>
 
           <p className='mt-4 max-w-2xl text-base text-neutral-600 dark:text-neutral-400 md:text-lg'>
