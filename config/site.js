@@ -39,5 +39,3 @@ export const profile = {
   email: 'mujnebinsafiul@gmail.com',
   resume: '/mujnebin-resume.pdf',
 }
-
-export const copyrightYear = 2026

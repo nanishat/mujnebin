@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { copyrightYear, profile, socialLinks } from '@/config/site'
+import { profile, socialLinks } from '@/config/site'
 import { quickActions, welcomeEntry } from '@/data/contact'
 import { getTerminalResponse } from '@/lib/terminal'
 import { submitContactForm } from '@/lib/contact-form'
@@ -106,15 +106,15 @@ const Contact = () => {
         <h2 className="mb-10 text-3xl font-extrabold text-neutral-900 md:text-4xl dark:text-neutral-100">
           Get in touch
         </h2>
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex flex-col gap-4 lg:col-span-5"
+            className="flex flex-col gap-4"
           >
-            <div className="flex min-h-[320px] flex-col justify-between rounded-2xl border border-neutral-800 bg-neutral-900 p-5 font-mono text-xs text-neutral-300 shadow-xl">
+            <div className="flex h-[420px] max-h-[420px] flex-col justify-between rounded-2xl border border-neutral-800 bg-neutral-900 p-5 font-mono text-xs text-neutral-300 shadow-xl">
               <div className="mb-4 flex items-center gap-2 border-b border-neutral-800 pb-4">
                 <span
                   aria-hidden="true"
@@ -136,7 +136,7 @@ const Contact = () => {
               <div
                 ref={outputRef}
                 aria-live="polite"
-                className="mb-4 min-h-0 flex-1 space-y-3 overflow-y-auto"
+                className="custom-scrollbar mb-4 min-h-0 flex-1 space-y-3 overflow-y-auto"
               >
                 {entries.map((entry, index) => (
                   <div key={`${entry.command ?? 'welcome'}-${index}`}>
@@ -200,7 +200,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
             onSubmit={onSubmit}
-            className="rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm md:p-8 lg:col-span-7 dark:border-neutral-800 dark:bg-neutral-900"
+            className="rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm md:p-8 dark:border-neutral-800 dark:bg-neutral-900"
           >
             <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <input
@@ -243,9 +243,14 @@ const Contact = () => {
           </motion.form>
         </div>
 
-        <p className="mt-8 border-t border-neutral-200/80 pt-5 text-center text-sm text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
-          © {copyrightYear} {profile.name}. All rights reserved.
-        </p>
+        <div className="mt-16 flex flex-col items-center justify-center space-y-1 px-2 pt-8 pb-16 text-center">
+          <p className="text-sm font-medium text-neutral-600 dark:text-neutral-400">
+            Just another guy on a mission to turn caffeine into code.
+          </p>
+          <p className="font-mono text-xs tracking-tight text-neutral-500 dark:text-neutral-500">
+            Handcrafted with Next.js, Motion &amp; Tailwind
+          </p>
+        </div>
       </div>
     </motion.section>
   )

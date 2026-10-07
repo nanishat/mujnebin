@@ -12,6 +12,20 @@
   border-radius: 9999px;
 }
 
+.custom-scrollbar {
+  scrollbar-color: #52525b transparent;
+  scrollbar-width: thin;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: #52525b;
+}
+
 .profile-ring::before {
   position: absolute;
   inset: 0;
