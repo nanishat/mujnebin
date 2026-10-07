@@ -150,9 +150,10 @@ export const experienceData = [
       'Built and deployed a centralized web-based issue reporting platform deployed across 370+ branches, serving 400+ active users.',
       'Implemented cascading hierarchy logic to streamline incident tracking, reduce data entry errors, and cut submission times by 60%.',
       'Engineered custom API workflows integrating attachments into Google Drive with automated response sheet linking.',
+      'Engineered automated Google Apps Script API handlers to inject and synchronize form submission data directly with Google Sheets spreadsheets.',
       'Worked with structured datasets across Salesforce and TaroWorks to standardize operational reporting and field data reliability.'
     ],
-    tech: ['SQL', 'Express.js', 'React', 'Node.js', 'Google Cloud APIs', 'Salesforce']
+    tech: ['Google Apps Script', 'Google Cloud APIs', 'SQL', 'Express.js', 'React', 'Node.js', 'Salesforce']
   },
   {
     id: 'akij-insaf',
@@ -179,7 +180,7 @@ export const experienceData = [
       'Research Case Study: IP Security Case Study',
       'Completed 6+ full-stack and systems engineering software projects'
     ],
-    tech: ['Computer Science', 'Data Structures', 'Web Engineering', 'Software Architecture']
+    tech: ['Computer Science', 'System Design', 'SDLC', 'Software Architecture', 'Research', 'Data Structures & Algorithms', 'Database Design', 'Networking', 'Cybersecurity']
   }
 ];
 
@@ -189,51 +190,24 @@ export const toolsData = [
 
 export const skillCategories = [
   {
-    label: 'Frontend',
-    skills: [
-      { name: 'ReactJS', icon: assets.git },
-      { name: 'TailwindCSS', icon: assets.git },
-      { name: 'NextJS', icon: assets.git },
-      { name: 'RxJS', icon: assets.git },
-      { name: 'NgRx', icon: assets.git },
-      { name: 'Leaflet', icon: assets.git },
-      { name: 'Capacitor', icon: assets.git },
-    ]
-  },
-  {
-    label: 'Backend',
-    skills: [
-      { name: 'Node.js', icon: assets.git },
-      { name: 'Express.js', icon: assets.git },
-      { name: 'Socket.IO', icon: assets.git },
-      { name: 'Auth0', icon: assets.git },
-      { name: '.NET Core', icon: assets.git },
-    ]
-  },
-  {
-    label: 'Databases',
-    skills: [
-      { name: 'PostgreSQL', icon: assets.git },
-      { name: 'MySQL', icon: assets.git },
-      { name: 'Redis', icon: assets.git },
-    ]
+    label: 'Core Technologies',
+    skills: ['Next.js', 'React.js', 'TypeScript', 'Node.js', 'Express.js', 'JavaScript (ES6+)', 'Tailwind CSS', 'HTML5/CSS3']
   },
   {
     label: 'Tools & Platforms',
-    skills: [
-      { name: 'Prisma', icon: assets.git },
-      { name: 'Git', icon: assets.git },
-      { name: 'GitHub', icon: assets.git },
-    ]
+    skills: ['Docker', 'Docker Compose', 'Nginx', 'Cloudflare R2', 'Tenbyte Cloud', 'Git/GitHub', 'cPanel', 'Vercel', 'n8n']
   },
   {
     label: 'Domain Knowledge',
-    skills: [
-      { name: 'Business Intelligence' },
-      { name: 'Cloud Computing' },
-      { name: 'Network Security' },
-      { name: 'Data Structures & Algorithms' }
-    ]
+    skills: ['ERP Architecture', 'Financial & Accounting Workflows', 'Bank Reconciliation', 'API Design & Security', 'Relational Data Modeling', 'MLOps Basics', 'System Hardening']
+  },
+  {
+    label: 'Databases & Integrations',
+    skills: ['PostgreSQL', 'Prisma ORM', 'SQL', 'Google Apps Script API', 'Google Cloud APIs', 'OAuth 2.0', 'REST APIs']
+  },
+  {
+    label: 'Data Science & AI',
+    skills: ['Pandas', 'NumPy', 'Time Series Analysis', 'Claude Code', 'GitHub Copilot', 'Prompt Engineering']
   }
 ];
 
