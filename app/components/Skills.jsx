@@ -1,6 +1,5 @@
 import { skillCategories } from '@/assets/assets';
 import { motion } from 'motion/react'
-import React from 'react';
 
 const Skills = () => {
   return (

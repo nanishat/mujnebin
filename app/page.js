@@ -35,12 +35,12 @@ export default function Home() {
     <div id="top" className="bg-paper dark:bg-darkTheme">
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Header isDarkMode={isDarkMode} />
-      <About isDarkMode={isDarkMode} />
+      <About />
       <Experience />
-      <Skills isDarkMode={isDarkMode} />
+      <Skills />
       <Projects isDarkMode={isDarkMode} />
       <Credentials />
-      <Contact isDarkMode={isDarkMode} />
+      <Contact />
     </div>
   );
 }

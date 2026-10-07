@@ -1,6 +1,6 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isScroll, setIsScroll] = useState(false);
@@ -14,22 +14,14 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
   return (
     <>
-      {/* radiant background */}
-      {/* <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden'>
-        <Image src={assets.header_bg_color} alt='' className='w-full' />
-      </div> */}
-
-      {/* navbar section */}
       <nav className={`w-full fixed top-0 z-50
          ${isScroll ? "bg-paper/80 backdrop-blur border-b border-neutral-200/80 dark:bg-richBlack/80 dark:border-arsenic" : ""}`}>
         <div className='mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 md:px-12'>
 
-          {/* brand */}
           <a href="#top" aria-label="Mujnebin home">
             <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt='Mujnebin.' className='w-28 cursor-pointer' />
           </a>
 
-          {/* navigation and controls */}
           <div className='flex items-center gap-2 md:gap-4'>
             <ul className={`hidden md:flex items-center gap-4 lg:gap-8 rounded-full px-6 py-3 lg:px-10
               ${isScroll ? "" : "shadow-sm bg-opacity-50 dark:border dark:border-arsenic dark:bg-transparent"} `}>
@@ -60,7 +52,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             </button>
           </div>
 
-          {/* mobile menu */}
           <div
             className={`fixed right-0 top-0 z-50 flex h-screen w-64 flex-col gap-4 bg-arsenic px-10 py-20 text-chineseWhite transition-transform duration-500 dark:bg-arsenic md:hidden
               ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}

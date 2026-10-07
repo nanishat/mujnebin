@@ -3,7 +3,7 @@
 import { assets } from '@/assets/assets'
 import { motion } from 'motion/react'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const roles = ['Software Developer', 'Full Stack Engineer', 'Web Architect']
 

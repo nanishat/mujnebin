@@ -1,7 +1,6 @@
 import { assets, workData } from '@/assets/assets'
 import { motion } from 'motion/react'
 import Image from 'next/image'
-import React from 'react'
 
 const Projects = ({ isDarkMode }) => {
   return (
