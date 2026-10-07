@@ -21,7 +21,7 @@ const credentials = [
   {
     title: 'Certificate on Data Science (ITS 507)',
     issuer: 'BRAC University (Sponsored by SICIP, Govt. of Bangladesh & ADB)',
-    status: 'Incoming / Selected Track',
+    status: 'Incoming',
     statusClass:
       'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20',
     metadata: '4-Month Professional Training · 16 Sessions',

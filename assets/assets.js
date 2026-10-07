@@ -164,10 +164,14 @@ export const experienceData = [
     location: 'Dhanmondi, Dhaka, Bangladesh • On-site',
     type: 'work',
     bullets: [
-      'Configured Linux-based network infrastructure, DHCP services, and MikroTik router rules across corporate networks.',
-      'Performed structured network diagnostics, hardware security setups, and end-user IT infrastructure support.'
+      'Configured MikroTik routers to manage bandwidth allocation, uplink/downlink distribution, and corporate firewall security rules across organizational systems.',
+      'Set up MikroTik switches for floor-level port provisioning, isolating traffic across IP cameras, workstation connections, and network trunks.',
+      'Architected and maintained the organizational IP addressing scheme for all network peripherals, including switches, IP cameras, printers, access points (APs), NVRs, intercoms, and smart board TVs.',
+      'Designed and built a 30-workstation ICT laboratory from scratch, provisioning static IP schemes, OS deployment, and domain user permission policies.',
+      'Conducted remote server, CLI, and network infrastructure diagnostics using SSH, DHCP configuration, and structured troubleshooting workflows.',
+      'Managed Google Admin Console (admin.google.com) for organization-wide user access controls, mass email routing rules, and domain-level policy management.'
     ],
-    tech: ['Linux', 'MikroTik', 'Networking', 'DHCP', 'Troubleshooting']
+    tech: ['MikroTik', 'Networking', 'Firewalls', 'VLAN & Port Switching', 'SSH', 'DHCP', 'System Troubleshooting', 'Google Admin Console']
   },
   {
     id: 'independent-university-bangladesh',
@@ -194,20 +198,20 @@ export const skillCategories = [
     skills: ['Next.js', 'React.js', 'TypeScript', 'Node.js', 'Express.js', 'JavaScript (ES6+)', 'Tailwind CSS', 'HTML5/CSS3']
   },
   {
-    label: 'Tools & Platforms',
-    skills: ['Docker', 'Docker Compose', 'Nginx', 'Cloudflare R2', 'Tenbyte Cloud', 'Git/GitHub', 'cPanel', 'Vercel', 'n8n']
-  },
-  {
-    label: 'Domain Knowledge',
-    skills: ['ERP Architecture', 'Financial & Accounting Workflows', 'Bank Reconciliation', 'API Design & Security', 'Relational Data Modeling', 'MLOps Basics', 'System Hardening']
+    label: 'Tools & DevOps',
+    skills: ['Docker', 'Docker Compose', 'Nginx', 'Cloudflare R2', 'cPanel', 'Git/GitHub', 'Linux/SSH']
   },
   {
     label: 'Databases & Integrations',
-    skills: ['PostgreSQL', 'Prisma ORM', 'SQL', 'Google Apps Script API', 'Google Cloud APIs', 'OAuth 2.0', 'REST APIs']
+    skills: ['PostgreSQL', 'Prisma ORM', 'SQL', 'Relational Data Modeling', 'Google Apps Script API', 'Google Cloud APIs', 'OAuth 2.0', 'REST APIs']
   },
   {
     label: 'Data Science & AI',
     skills: ['Pandas', 'NumPy', 'Time Series Analysis', 'Claude Code', 'GitHub Copilot', 'Prompt Engineering']
+  },
+  {
+    label: 'Networking & Systems',
+    skills: ['MikroTik RouterOS', 'Network Architecture', 'Firewall Security', 'VLAN & Port Switching', 'DHCP', 'SSH Diagnostics', 'Google Admin Console']
   }
 ];
 
