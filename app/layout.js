@@ -1,29 +1,27 @@
-import { Outfit, Ovo } from "next/font/google";
-import "./globals.css";
+import { Outfit, Ovo } from 'next/font/google'
+import { siteMetadata } from '@/config/site'
+import './globals.css'
 
 const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"]
-});
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+})
 
 const ovo = Ovo({
-  subsets: ["latin"],
-  weight: ["400"]
-});
+  subsets: ['latin'],
+  weight: ['400'],
+})
 
-export const metadata = {
-  title: "S Mujnebin",
-  description: "Persistent by nature, driven by results",
-};
+export const metadata = siteMetadata
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden bg-chineseWhite text-richBlack dark:bg-richBlack dark:text-chineseWhite`}
+        className={`${outfit.className} ${ovo.className} overflow-x-hidden bg-chineseWhite leading-8 text-richBlack antialiased dark:bg-richBlack dark:text-chineseWhite`}
       >
         {children}
       </body>
     </html>
-  );
+  )
 }
