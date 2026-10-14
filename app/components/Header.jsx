@@ -57,7 +57,7 @@ const Header = () => {
           <div className="mt-6 hidden w-full grid-cols-3 gap-4 rounded-2xl bg-neutral-100 p-4 text-center lg:grid dark:bg-neutral-900">
             <div className="px-2">
               <p className="text-2xl font-bold text-[#E27355] md:text-3xl">
-                1+
+                4+
               </p>
               <p className="mt-1 text-xs font-medium text-neutral-600 dark:text-neutral-400">
                 Yrs Experience
@@ -65,7 +65,7 @@ const Header = () => {
             </div>
             <div className="border-x border-neutral-200 px-2 dark:border-neutral-700">
               <p className="text-2xl font-bold text-[#E27355] md:text-3xl">
-                8+
+                20+
               </p>
               <p className="mt-1 text-xs font-medium text-neutral-600 dark:text-neutral-400">
                 Projects
