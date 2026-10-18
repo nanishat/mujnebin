@@ -16,7 +16,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <>
       <nav
-        className={`fixed top-0 z-50 w-full ${isScroll ? 'border-b border-neutral-200/80 bg-paper/80 backdrop-blur dark:border-arsenic dark:bg-richBlack/80' : ''}`}
+        className={`fixed top-0 z-50 hidden w-full md:block ${isScroll ? 'border-b border-neutral-200/80 bg-paper/80 backdrop-blur dark:border-arsenic dark:bg-richBlack/80' : ''}`}
       >
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 md:px-12">
           <a href="#top" aria-label="Mujnebin home">
@@ -60,7 +60,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </div>
         </div>
       </nav>
-      <MobileDock />
+      <MobileDock isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
     </>
   )
 }

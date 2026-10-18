@@ -1,7 +1,16 @@
 'use client'
 
 import { navigationLinks } from '@/config/site'
-import { Briefcase, Code, Folder, Mail, User } from 'lucide-react'
+import {
+  Briefcase,
+  Code,
+  Folder,
+  Home,
+  Mail,
+  Moon,
+  Sun,
+  User,
+} from 'lucide-react'
 import { motion } from 'motion/react'
 import { useEffect, useState } from 'react'
 
@@ -13,7 +22,7 @@ const dockItems = [
   { href: '#contact', label: 'Contact', icon: Mail },
 ]
 
-const MobileDock = () => {
+const MobileDock = ({ isDarkMode, setIsDarkMode }) => {
   const [activeHref, setActiveHref] = useState(dockItems[0].href)
 
   useEffect(() => {
@@ -44,9 +53,20 @@ const MobileDock = () => {
 
   return (
     <nav
-      aria-label="Mobile section navigation"
-      className="fixed bottom-4 left-1/2 z-50 flex -translate-x-1/2 items-center gap-1 rounded-full border border-neutral-200/80 bg-white/80 px-3 py-2 shadow-lg shadow-black/5 backdrop-blur-lg md:hidden dark:border-neutral-800 dark:bg-neutral-900/80"
+      aria-label="Mobile navigation"
+      className="fixed bottom-5 left-1/2 z-50 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-white/10 bg-neutral-900/90 px-3 py-2 shadow-2xl backdrop-blur-xl md:hidden dark:bg-neutral-900/90"
     >
+      <motion.a
+        href="#top"
+        aria-label="Home"
+        whileTap={{ scale: 0.92 }}
+        className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-400 transition-all hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+      >
+        <Home aria-hidden="true" focusable="false" size={19} strokeWidth={2} />
+      </motion.a>
+
+      <span aria-hidden="true" className="h-4 w-[1px] bg-white/10" />
+
       {navigationLinks.map(({ href }) => {
         const dockItem = dockItems.find((item) => item.href === href)
         if (!dockItem) return null
@@ -62,21 +82,43 @@ const MobileDock = () => {
             aria-label={label}
             aria-current={isActive ? 'location' : undefined}
             whileTap={{ scale: 0.92 }}
-            className={`flex h-11 w-11 items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
+            className={`flex h-9 w-9 items-center justify-center rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
               isActive
-                ? 'bg-neutral-100 text-emerald-500 dark:bg-neutral-800'
-                : 'text-neutral-500 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800'
+                ? 'bg-white/10 text-emerald-400'
+                : 'text-neutral-400 hover:text-white'
             }`}
           >
             <Icon
               aria-hidden="true"
               focusable="false"
-              size={20}
+              size={19}
               strokeWidth={2}
             />
           </motion.a>
         )
       })}
+
+      <span aria-hidden="true" className="h-4 w-[1px] bg-white/10" />
+
+      <motion.button
+        type="button"
+        aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+        aria-pressed={isDarkMode}
+        whileTap={{ scale: 0.92 }}
+        onClick={() => setIsDarkMode((prev) => !prev)}
+        className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-400 transition-all hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+      >
+        {isDarkMode ? (
+          <Sun aria-hidden="true" focusable="false" size={19} strokeWidth={2} />
+        ) : (
+          <Moon
+            aria-hidden="true"
+            focusable="false"
+            size={19}
+            strokeWidth={2}
+          />
+        )}
+      </motion.button>
     </nav>
   )
 }
