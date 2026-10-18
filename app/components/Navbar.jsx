@@ -2,10 +2,10 @@ import { assets } from '@/assets/assets'
 import { navigationLinks } from '@/config/site'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import MobileDock from './MobileDock'
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isScroll, setIsScroll] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setIsScroll(window.scrollY > 50)
@@ -57,51 +57,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                 className="w-6"
               />
             </button>
-
-            <button
-              type="button"
-              aria-label="Open navigation menu"
-              aria-expanded={isMenuOpen}
-              className="flex min-h-11 min-w-11 items-center justify-center md:hidden"
-              onClick={() => setIsMenuOpen(true)}
-            >
-              <Image
-                src={isDarkMode ? assets.menu_white : assets.menu_black}
-                alt=""
-                className="w-6"
-              />
-            </button>
-          </div>
-
-          <div
-            className={`fixed right-0 top-0 z-50 flex h-screen w-64 flex-col gap-4 bg-arsenic px-10 py-20 text-chineseWhite transition-transform duration-500 md:hidden dark:bg-arsenic ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
-          >
-            <button
-              type="button"
-              aria-label="Close navigation menu"
-              className="absolute right-6 top-6 flex min-h-11 min-w-11 items-center justify-center"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <Image
-                src={isDarkMode ? assets.close_white : assets.close_black}
-                alt=""
-                className="w-5 cursor-pointer"
-              />
-            </button>
-
-            {navigationLinks.map((link) => (
-              <a
-                key={link.href}
-                className="font-Ovo"
-                onClick={() => setIsMenuOpen(false)}
-                href={link.href}
-              >
-                {link.label}
-              </a>
-            ))}
           </div>
         </div>
       </nav>
+      <MobileDock />
     </>
   )
 }
