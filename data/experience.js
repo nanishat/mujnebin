@@ -3,7 +3,7 @@ const experienceData = [
     id: 'protection-one',
     role: 'Software Developer',
     org: 'Protection One (Pvt.) Ltd.',
-    period: 'June 2024 – Present',
+    period: 'June 2026 – Present',
     employmentType: 'Full-time',
     location: 'Dhaka, Bangladesh',
     type: 'work',
