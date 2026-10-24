@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import { Outfit, Ovo } from 'next/font/google'
 import { siteMetadata } from '@/config/site'
 import './globals.css'
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${outfit.className} ${ovo.className} overflow-x-hidden bg-chineseWhite leading-8 text-richBlack antialiased dark:bg-richBlack dark:text-chineseWhite`}
       >
+        <Analytics />
         {children}
       </body>
     </html>
