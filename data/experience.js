@@ -46,11 +46,10 @@ const experienceData = [
     location: 'Mohakhali, Dhaka, Bangladesh • On-site',
     type: 'work',
     bullets: [
-      'Built and deployed a centralized web-based issue reporting platform deployed across 370+ branches, serving 400+ active users.',
-      'Implemented cascading hierarchy logic to streamline incident tracking, reduce data entry errors, and cut submission times by 60%.',
-      'Engineered custom API workflows integrating attachments into Google Drive with automated response sheet linking.',
-      'Engineered automated Google Apps Script API handlers to inject and synchronize form submission data directly with Google Sheets spreadsheets.',
-      'Worked with structured datasets across Salesforce and TaroWorks to standardize operational reporting and field data reliability.',
+      'Developed and deployed a centralized web-based issue reporting platform across 370+ BRAC branches, serving 400+ active users nationwide.',
+      'Implemented cascading relational hierarchy logic to streamline incident tracking, eliminating manual data entry errors and cutting ticket submission times by 60%.',
+      'Automated custom Google Cloud and Apps Script API pipelines to ingest form payloads, link media attachments to Google Drive, and synchronize real-time reporting data into Google Sheets.',
+      'Structured large-scale field datasets across Salesforce and TaroWorks, standardizing operational reporting workflows and enhancing data reliability for programme stakeholders.'
     ],
     tech: [
       'Google Apps Script',
@@ -68,15 +67,14 @@ const experienceData = [
     org: 'Akij INSAF Ltd.',
     period: 'Feb 2024 – May 2024 (4 mos)',
     employmentType: 'Internship',
-    location: 'Dhanmondi, Dhaka, Bangladesh • On-site',
+    location: 'Lighthouse International School, Dhanmondi, Dhaka, Bangladesh • On-site',
     type: 'work',
     bullets: [
-      'Configured MikroTik routers to manage bandwidth allocation, uplink/downlink distribution, and corporate firewall security rules across organizational systems.',
-      'Set up MikroTik switches for floor-level port provisioning, isolating traffic across IP cameras, workstation connections, and network trunks.',
-      'Architected and maintained the organizational IP addressing scheme for all network peripherals, including switches, IP cameras, printers, access points (APs), NVRs, intercoms, and smart board TVs.',
-      'Designed and built a 30-workstation ICT laboratory from scratch, provisioning static IP schemes, OS deployment, and domain user permission policies.',
-      'Conducted remote server, CLI, and network infrastructure diagnostics using SSH, DHCP configuration, and structured troubleshooting workflows.',
-      'Managed Google Admin Console (admin.google.com) for organization-wide user access controls, mass email routing rules, and domain-level policy management.',
+      'Architected and maintained core campus network infrastructure supporting 500+ daily active users (400+ students, 40+ faculty, and administrative staff) with strict throughput controls and zero-trust security policies.',
+      'Configured MikroTik routers and switches for floor-level port provisioning, bandwidth allocation, and secure VLAN isolation across IP surveillance, wireless access points, smart boards, and administrative workstations.',
+      'Engineered a 30-workstation ICT laboratory from scratch, leading complete network topology layout, automated OS deployment, and domain-level permission controls.',
+      'Administered Google Admin Console for organization-wide user identity management, mass email routing, and domain security policies across all faculty and student accounts.',
+      'Executed remote network diagnostics, CLI troubleshooting, SSH management, and DHCP configuration to maintain 99.9% network infrastructure uptime.'
     ],
     tech: [
       'MikroTik',
