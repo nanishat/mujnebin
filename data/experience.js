@@ -19,10 +19,9 @@ const experienceData = [
       {
         title: 'Security Operations & Guard Tracking Platform',
         bullets: [
-          'Provisioned and hardened a Tenbyte Cloud VM Linux server, configuring Nginx reverse proxy routing, SSH key authentication, and Cloudflare R2 object storage.',
-          'Completed backend deployment, environment configuration, and cPanel cross-origin (CORS) integration to bring the platform live.',
-          'Authored comprehensive developer documentation, source code specs, and bilingual (English & Bengali) user manuals.',
-          'Produced complete video onboarding tutorials for admin and client users using custom scripts and AI voice cloning.',
+          'Engineered and scaled a nationwide security operations platform tracking 2,000+ active guards, incorporating real-time geofence compliance monitoring to instantly flag out-of-boundary deviations.',
+          'Provisioned and hardened production cloud infrastructure on a Tenbyte Linux VM, configuring Nginx reverse proxy routing, secure SSH key authentication, and Cloudflare R2 object storage for high-throughput telemetry.',
+          'Executed full-stack backend deployments, environment management, and cPanel cross-origin (CORS) integrations to successfully bring live web and admin tracking portals online.'
         ],
       },
     ],
