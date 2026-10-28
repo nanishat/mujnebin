@@ -22,37 +22,39 @@ const About = () => {
           <div className='space-y-7'>
             <div>
               <p className='mb-2 font-mono text-xs uppercase tracking-wider text-white/60'>
-                Where I started
+                My Background &amp; Foundation
               </p>
               <p className='font-Ovo leading-relaxed text-white/90'>
-                I started coding at the beginning of my university career and
-                completed a six-month internship with BRAC&apos;s Skills
-                Development Programme (SDP). There, I built a field information
-                collection web application with cascading, multi-layer
-                filtering that supported BRAC&apos;s existing system and
-                reached 400+ users across 370+ branches.
+                Experienced across software engineering, full-stack
+                architecture, and network infrastructure, I bring over{' '}
+                <span className='text-[#F87171]'>
+                  4 years of overall development experience
+                </span>{' '}
+                and{' '}
+                <span className='text-[#5AEECC]'>
+                  1.5+ years of hands-on professional work
+                </span>
+                . Throughout my journey, I’ve naturally drifted toward
+                understanding systems as a whole—whether that means
+                architecting enterprise tools, deploying web applications, or
+                configuring underlying network environments. Having that
+                technical range has shaped how I approach engineering problems
+                from day one.
               </p>
             </div>
 
             <div>
               <p className='mb-2 font-mono text-xs uppercase tracking-wider text-white/60'>
-                What I build
+                My Focus &amp; Next Chapter
               </p>
               <p className='font-Ovo leading-relaxed text-white/90'>
-                I currently work at Protection One Pvt. Ltd. as an in-house
-                Software Developer, building an ERP solution from scratch with{' '}
-                <span className='text-[#F87171]'>Next.js, PostgreSQL</span> and{' '}
-                <span className='text-[#5AEECC]'>Docker</span>.
-              </p>
-            </div>
-
-            <div>
-              <p className='mb-2 font-mono text-xs uppercase tracking-wider text-white/60'>
-                Where I&apos;m heading
-              </p>
-              <p className='font-Ovo leading-relaxed text-white/90'>
-                My long-term goal is to build technology that creates meaningful
-                impact and adds real value to people&apos;s work and lives.
+                Now, I am actively focusing my path toward{' '}
+                <span className='text-[#F87171]'>Data Science</span>. Backed by
+                specialized training and continuous hands-on projects, my focus
+                is on bridging software development with data analytical
+                models. I want to build intelligent, data-driven software that
+                doesn&apos;t just collect information, but turns it into
+                meaningful insights that help businesses and people grow.
               </p>
             </div>
           </div>
