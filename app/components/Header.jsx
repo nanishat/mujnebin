@@ -1,7 +1,9 @@
 'use client'
 
 import { assets } from '@/assets/assets'
-import { profile, profileLinks, roles } from '@/config/site'
+import { profile, roles } from '@/config/site'
+import CoreExpertiseCard from './CoreExpertiseCard'
+import HeroCTAs from './HeroCTAs'
 import { motion } from 'motion/react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
@@ -54,7 +56,7 @@ const Header = () => {
             />
           </div>
 
-          <div className="mt-6 hidden w-full grid-cols-3 gap-4 rounded-2xl bg-neutral-100 p-4 text-center lg:grid dark:bg-neutral-900">
+          <div className="mt-6 grid w-full grid-cols-3 gap-4 rounded-2xl bg-neutral-100 p-4 text-center dark:bg-neutral-900">
             <div className="px-2">
               <p className="text-2xl font-bold text-[#E27355] md:text-3xl">
                 4+
@@ -78,6 +80,7 @@ const Header = () => {
               </p>
             </div>
           </div>
+          <CoreExpertiseCard />
         </motion.div>
 
         <motion.div
@@ -123,35 +126,7 @@ const Header = () => {
             </i>
           </p>
 
-          <div className="mt-7 flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
-            <a
-              href="#contact"
-              className="flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#18181B] px-6 text-white transition-colors hover:bg-neutral-700 sm:w-auto dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300"
-            >
-              Get in Touch
-              <Image src={assets.right_arrow_white} alt="" className="w-4" />
-            </a>
-
-            <a
-              href={profile.resume}
-              download="mujnebin-resume.pdf"
-              className="flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-neutral-300 px-6 text-neutral-900 transition-colors hover:bg-white sm:w-auto dark:border-neutral-700 dark:text-neutral-100 dark:hover:bg-neutral-900"
-            >
-              Download Resume
-              <Image src={assets.download_icon} alt="" className="w-4" />
-            </a>
-            {profileLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                className="flex h-11 w-full items-center justify-center rounded-xl border border-neutral-300 px-6 text-neutral-900 transition-colors hover:bg-white sm:w-auto dark:border-neutral-700 dark:text-neutral-100 dark:hover:bg-neutral-900"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+          <HeroCTAs />
         </motion.div>
       </div>
     </section>

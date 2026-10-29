@@ -43,9 +43,9 @@ export const skillCategories = [
       'Pandas',
       'NumPy',
       'Time Series Analysis',
-      'Claude Code',
-      'GitHub Copilot',
-      'Prompt Engineering',
+      'EDA',
+      'Data Visualization',
+      'OpenAI API'
     ],
   },
   {

@@ -2,38 +2,37 @@ const experienceData = [
   {
     id: 'protection-one',
     role: 'Software Developer',
-    org: 'Protection One (Pvt.) Ltd.',
-    period: 'June 2026 – Present',
-    employmentType: 'Full-time',
+    org: 'Protection One Pvt. Ltd.',
+    period: 'June 2026 – Nov 2026 (6 mos)',
+    employmentType: 'Contract',
     location: 'Dhaka, Bangladesh',
     type: 'work',
     sections: [
       {
         title: 'Enterprise Resource Planning (ERP) Platform',
         bullets: [
-          'Architecting an in-house ERP system from scratch using Next.js, Prisma, PostgreSQL, and Docker.',
-          'Gathering operational requirements iteratively from accounting stakeholders, translating business rules into schema models and automated posting workflows.',
-          'Designed and implemented core financial modules, including multi-branch debit vouchers, line-level bank validations, consolidated ledger posting, and bank reconciliation matching.',
+          'Architected a custom internal ERP system using Next.js, Prisma, PostgreSQL, and Docker, leading the end-to-end design of the core accounting and financial engine.',
+          'Translated complex business, tax, and accounting rules into relational database schemas, multi-branch debit voucher systems, and automated consolidated ledger workflows.',
+          'Collaborated directly with accounting stakeholders to map operational business logic, building automated bank reconciliation algorithms and line-level financial validations.'
         ],
       },
       {
         title: 'Security Operations & Guard Tracking Platform',
         bullets: [
-          'Engineered and scaled a nationwide security operations platform tracking 2,000+ active guards, incorporating real-time geofence compliance monitoring to instantly flag out-of-boundary deviations.',
-          'Provisioned and hardened production cloud infrastructure on a Tenbyte Linux VM, configuring Nginx reverse proxy routing, secure SSH key authentication, and Cloudflare R2 object storage for high-throughput telemetry.',
-          'Executed full-stack backend deployments, environment management, and cPanel cross-origin (CORS) integrations to successfully bring live web and admin tracking portals online.'
+          'Provisioned and configured a production Linux VM environment to deploy and host the backend tracking services and admin applications.',
+          'Configured Nginx as a reverse proxy, set up secure SSH key authentication, and integrated cross-origin (CORS) routing for web and mobile clients.',
+          'Audited the existing codebase to understand system architecture and generated end-to-end user manuals and operational guides for internal stakeholders.'
         ],
-      },
+      }
     ],
     tech: [
       'Next.js',
       'PostgreSQL',
       'Docker',
-      'Express.js',
       'Prisma',
       'Nginx',
-      'Cloudflare R2',
-      'Tailwind CSS',
+      'Linux (Ubuntu/VM)',
+      'SQL'
     ],
   },
   {
@@ -45,10 +44,10 @@ const experienceData = [
     location: 'Mohakhali, Dhaka, Bangladesh • On-site',
     type: 'work',
     bullets: [
-      'Developed and deployed a centralized web-based issue reporting platform across 370+ BRAC branches, serving 400+ active users nationwide.',
-      'Implemented cascading relational hierarchy logic to streamline incident tracking, eliminating manual data entry errors and cutting ticket submission times by 60%.',
-      'Automated custom Google Cloud and Apps Script API pipelines to ingest form payloads, link media attachments to Google Drive, and synchronize real-time reporting data into Google Sheets.',
-      'Structured large-scale field datasets across Salesforce and TaroWorks, standardizing operational reporting workflows and enhancing data reliability for programme stakeholders.'
+      'Launched a centralized issue-reporting platform across 370+ BRAC branches, supporting 400+ active users nationwide.',
+      'Streamlined incident tracking with cascading relational hierarchy logic, eliminating manual data-entry errors and delivering 60% time savings in ticket submission.',
+      'Automated Google Cloud and Apps Script pipelines to ingest form data, link Google Drive media, and synchronize reports to Google Sheets.',
+      'Standardized Salesforce and TaroWorks field datasets to improve reporting workflows and data reliability for programme stakeholders.'
     ],
     tech: [
       'Google Apps Script',
@@ -69,11 +68,11 @@ const experienceData = [
     location: 'Lighthouse International School, Dhanmondi, Dhaka, Bangladesh • On-site',
     type: 'work',
     bullets: [
-      'Architected and maintained core campus network infrastructure supporting 500+ daily active users (400+ students, 40+ faculty, and administrative staff) with strict throughput controls and zero-trust security policies.',
-      'Configured MikroTik routers and switches for floor-level port provisioning, bandwidth allocation, and secure VLAN isolation across IP surveillance, wireless access points, smart boards, and administrative workstations.',
-      'Engineered a 30-workstation ICT laboratory from scratch, leading complete network topology layout, automated OS deployment, and domain-level permission controls.',
-      'Administered Google Admin Console for organization-wide user identity management, mass email routing, and domain security policies across all faculty and student accounts.',
-      'Executed remote network diagnostics, CLI troubleshooting, SSH management, and DHCP configuration to maintain 99.9% network infrastructure uptime.'
+      'Sustained campus network infrastructure for 500+ users with throughput controls and zero-trust security policies.',
+      'Configured MikroTik routers and switches for port provisioning, bandwidth allocation, and VLAN isolation across campus systems.',
+      'Established a 30-workstation ICT laboratory, designing its network topology, automated OS deployment, and domain permissions.',
+      'Administered Google Admin Console identity management, email routing, and domain security policies for faculty and students.',
+      'Diagnosed network issues through CLI troubleshooting, SSH management, and DHCP configuration to maintain 99.9% uptime.'
     ],
     tech: [
       'MikroTik',
