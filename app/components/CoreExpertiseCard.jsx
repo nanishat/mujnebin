@@ -7,7 +7,7 @@ export default function CoreExpertiseCard() {
           Core Expertise
         </span>
         <div className="flex flex-wrap gap-1.5">
-          {["Machine Learning", "Python", "SQL", "Pandas"].map((skill, index) => (
+          {["SQL", "Python", "PostgreSQL", "Docker", "GCP"].map((skill, index) => (
             <span
               key={index}
               className="px-2.5 py-1 text-xs font-medium rounded-md bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200"
