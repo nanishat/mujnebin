@@ -1,30 +1,44 @@
 export const projects = [
   {
-    title: 'Taroworks Troubleshooting Web App',
+    title: "Protection One Security Platform",
     description:
-      'TaroWorks troubleshooting platform for BRAC SDP, serving 400+ field users',
-    bgImage: '/ttwf.png',
-    link: 'https://github.com/nanishat/supreme-dollop',
+      "Security operations and guard-tracking platform supporting Protection One teams, backed by a production Linux deployment and secure web infrastructure.",
+    category: "Software Engineering",
+    techStack: ["Linux", "Nginx", "SSH", "CORS"],
+    highlight: "2,000+ guards",
+    bgImage: null,
+    link: "https://github.com/nanishat",
+    visual: "security",
   },
   {
-    title: 'Chatbot',
+    title: "BRAC SDP Troubleshooting Web App",
     description:
-      'Interactive AI chatbot with real-time responses and natural language understanding, providing personalized assistance and engaging conversations.',
-    bgImage: '/Chatbot.png',
-    link: 'https://github.com/nanishat/chatbot',
+      "Centralized issue reporting across 370+ BRAC branches, streamlining incident tracking for field teams nationwide.",
+    category: "Software Engineering",
+    techStack: ["React", "Node.js", "Express.js", "SQL"],
+    highlight: "400+ active users",
+    bgImage: "/ttwf.png",
+    link: "https://github.com/nanishat/supreme-dollop",
   },
   {
-    title: 'Amazon Clone',
+    title: "Conversational AI Chatbot",
     description:
-      'Amazon-inspired e-commerce platform with robust cart functionality and seamless user experience.',
-    bgImage: '/amazon.png',
-    link: 'https://github.com/nanishat/js-amazon-clone',
+      "An interactive chatbot built around natural-language understanding and real-time responses.",
+    category: "Data Science & AI",
+    techStack: ["Python", "Natural Language Processing", "AI"],
+    highlight: "Real-time responses",
+    bgImage: "/Chatbot.png",
+    link: "https://github.com/nanishat/chatbot",
   },
   {
-    title: 'GAME: Rock Paper Scissors',
+    title: "Nursing Robot Research",
     description:
-      'Rock Paper Scissors game with autoplay and scoring system, allowing players to compete against the computer and track their performance over time.',
-    bgImage: '/RPS.png',
-    link: 'https://github.com/nanishat/rock-paper-scissors',
+      "A nursing-robot research project presented as an IEEE conference paper, exploring technology-assisted care.",
+    category: "Data Science & AI",
+    techStack: ["Robotics", "Research", "Human-centered design"],
+    highlight: "IEEE conference paper",
+    bgImage: null,
+    link: "https://github.com/nanishat",
+    visual: "robotics",
   },
-]
+];
