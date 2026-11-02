@@ -60,7 +60,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </div>
         </div>
       </nav>
-      <MobileDock isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <MobileDock />
     </>
   )
 }

@@ -38,7 +38,10 @@ const Header = () => {
   }, [displayedRole, isDeleting, roleIndex])
 
   return (
-    <section className="flex min-h-[85vh] flex-col justify-center bg-[#FBF9F5] py-20 text-neutral-900 md:py-28 dark:bg-neutral-950 dark:text-neutral-100">
+    <section
+      id="hero"
+      className="flex min-h-[85vh] flex-col justify-center bg-[#FBF9F5] py-20 text-neutral-900 md:py-28 dark:bg-neutral-950 dark:text-neutral-100"
+    >
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 md:px-12 lg:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
