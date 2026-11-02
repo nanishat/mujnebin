@@ -23,15 +23,26 @@ const dockItems = [
 ]
 
 const MobileDock = ({ isDarkMode, setIsDarkMode }) => {
-  const [activeHref, setActiveHref] = useState(dockItems[0].href)
+  const [activeHref, setActiveHref] = useState('#top')
 
   useEffect(() => {
     const sections = dockItems
       .map(({ href }) => document.getElementById(href.slice(1)))
       .filter((section) => section !== null)
 
+    const handleScroll = () => {
+      if (window.scrollY <= 80) {
+        setActiveHref('#top')
+      }
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
+        if (window.scrollY <= 80) {
+          setActiveHref('#top')
+          return
+        }
+
         const visibleSections = entries
           .filter((entry) => entry.isIntersecting)
           .sort(
@@ -48,24 +59,37 @@ const MobileDock = ({ isDarkMode, setIsDarkMode }) => {
     )
 
     sections.forEach((section) => observer.observe(section))
-    return () => observer.disconnect()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   return (
     <nav
       aria-label="Mobile navigation"
-      className="fixed bottom-5 left-1/2 z-50 flex -translate-x-1/2 items-center gap-2 rounded-full border border-white/10 bg-neutral-900/90 px-3 py-2 shadow-2xl backdrop-blur-xl md:hidden"
+      className="fixed bottom-0 left-0 right-0 z-50 flex w-full justify-around items-center border-t border-neutral-800 bg-neutral-900/95 px-1 pt-2 pb-[env(safe-area-inset-bottom)] backdrop-blur-lg md:hidden"
     >
       <motion.a
         href="#top"
         aria-label="Mujnebin home"
+        aria-current={activeHref === '#top' ? 'location' : undefined}
         whileTap={{ scale: 0.92 }}
-        className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-400 transition-all hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+        className={`relative flex min-h-12 flex-1 items-center justify-center text-neutral-400 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
+          activeHref === '#top' ? 'text-emerald-400' : ''
+        }`}
       >
         <Home aria-hidden="true" focusable="false" size={19} strokeWidth={2} />
+        {activeHref === '#top' && (
+          <span
+            aria-hidden="true"
+            className="absolute bottom-0 h-0.5 w-5 rounded-full bg-emerald-400"
+          />
+        )}
       </motion.a>
-
-      <span aria-hidden="true" className="h-4 w-[1px] bg-white/10" />
 
       {navigationLinks.map(({ href }) => {
         const dockItem = dockItems.find((item) => item.href === href)
@@ -82,9 +106,9 @@ const MobileDock = ({ isDarkMode, setIsDarkMode }) => {
             aria-label={label}
             aria-current={isActive ? 'location' : undefined}
             whileTap={{ scale: 0.92 }}
-            className={`flex h-9 w-9 items-center justify-center rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
+            className={`relative flex min-h-12 flex-1 items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
               isActive
-                ? 'bg-white/10 text-emerald-400'
+                ? 'text-emerald-400'
                 : 'text-neutral-400 hover:text-white'
             }`}
           >
@@ -94,11 +118,15 @@ const MobileDock = ({ isDarkMode, setIsDarkMode }) => {
               size={19}
               strokeWidth={2}
             />
+            {isActive && (
+              <span
+                aria-hidden="true"
+                className="absolute bottom-0 h-0.5 w-5 rounded-full bg-emerald-400"
+              />
+            )}
           </motion.a>
         )
       })}
-
-      <span aria-hidden="true" className="h-4 w-[1px] bg-white/10" />
 
       <motion.button
         type="button"
@@ -106,7 +134,7 @@ const MobileDock = ({ isDarkMode, setIsDarkMode }) => {
         aria-pressed={isDarkMode}
         whileTap={{ scale: 0.92 }}
         onClick={() => setIsDarkMode((prev) => !prev)}
-        className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-400 transition-all hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+        className="flex min-h-12 flex-1 items-center justify-center text-neutral-400 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
       >
         {isDarkMode ? (
           <Sun aria-hidden="true" focusable="false" size={19} strokeWidth={2} />
