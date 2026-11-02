@@ -42,13 +42,13 @@ const Header = () => {
       id="hero"
       className="flex min-h-[85vh] flex-col justify-center bg-[#FBF9F5] py-20 text-neutral-900 md:py-28 dark:bg-neutral-950 dark:text-neutral-100"
     >
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 md:px-12 lg:grid-cols-12">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-12 px-6 md:flex-row-reverse md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="order-first flex flex-col items-center lg:order-last lg:col-span-5"
+          className="order-last flex w-full flex-col items-center md:order-first md:flex-[5]"
         >
           <div className="profile-ring shrink-0">
             <Image
@@ -91,7 +91,7 @@ const Header = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="order-last flex w-full flex-col items-center text-center lg:order-first lg:col-span-7 lg:items-start lg:text-left"
+          className="order-first flex w-full flex-col items-center text-center md:order-last md:flex-[7] md:items-start md:text-left"
         >
           <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-4 py-2 text-xs font-semibold tracking-wide text-green-800 dark:border-green-900 dark:bg-green-950 dark:text-green-300">
             <span className="h-2 w-2 animate-pulse rounded-full bg-green-500 shadow-[0_0_8px_2px_rgba(34,197,94,0.45)]" />
