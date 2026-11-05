@@ -15,6 +15,28 @@ export const projects = [
     linkLabel: "View Dashboard",
   },
   {
+    title: "Titanic Survival: Exploratory Data Analysis",
+    description:
+      "End-to-end EDA of the Kaggle Titanic dataset in Python. Handled missing values, duplicates, and outliers; engineered age group, family size, and is-alone features; and analysed survival by gender, class, and age group with univariate and bivariate analysis, a correlation heatmap, and a t-test on gender survival differences.",
+    category: "Data Analytics",
+    techStack: [
+      "Python",
+      "pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn",
+      "SciPy",
+      "Google Colab",
+    ],
+    highlight:
+      "Gender and passenger class were the strongest survival factors; female passengers had significantly higher survival odds.",
+    bgImage: "/titanic-eda.png",
+    imageAlt: "Correlation heatmap from Titanic passenger survival analysis",
+    note: "Built on the public Kaggle Titanic dataset.",
+    link: "https://github.com/nanishat/EDA-Titanic",
+    linkLabel: "View on GitHub",
+  },
+  {
     title: "Protection One Security Platform",
     description:
       "Security operations and guard-tracking platform supporting Protection One teams, backed by a production Linux deployment and secure web infrastructure.",
