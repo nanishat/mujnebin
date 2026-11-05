@@ -13,54 +13,70 @@ const About = () => {
       <p className='mb-2 text-xs font-bold uppercase tracking-widest text-neutral-400'>
         Who I am
       </p>
-      <h2 className='mb-10 text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 md:text-4xl'>
+      <h2 className='mb-10 text-3xl font-extrabold text-neutral-900 md:text-4xl dark:text-neutral-100'>
         About me
       </h2>
 
       <div className='grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-8'>
-        <article className='rounded-3xl bg-ink p-6 text-white md:p-10 lg:col-span-8'>
-          <div className='space-y-7'>
+        <article className='rounded-2xl border border-neutral-800 bg-neutral-900 p-6 text-neutral-200 shadow-xl md:p-10 lg:col-span-8'>
+          <div className='space-y-5'>
             <div>
-              <p className='mb-2 font-mono text-xs uppercase tracking-wider text-white/60'>
-                My Background &amp; Foundation
+              <p className='mb-2 block font-mono text-xs uppercase tracking-wider text-neutral-500'>
+                MY BACKGROUND &amp; FOUNDATION
               </p>
-              <p className='font-Ovo leading-relaxed text-white/90'>
-                Experienced across software engineering, full-stack
-                architecture, and network infrastructure, I bring over{' '}
-                <span className='text-[#F87171]'>
+              <p className='text-sm leading-relaxed text-neutral-300 md:text-base'>
+                I’m a software developer with over{' '}
+                <span className='font-semibold text-red-500'>
                   4 years of overall development experience
                 </span>{' '}
                 and{' '}
-                <span className='text-[#5AEECC]'>
+                <span className='font-semibold text-emerald-400'>
                   1.5+ years of hands-on professional work
                 </span>
-                . Throughout my journey, I’ve naturally drifted toward
-                understanding systems as a whole—whether that means
-                architecting enterprise tools, deploying web applications, or
-                configuring underlying network environments. Having that
-                technical range has shaped how I approach engineering problems
-                from day one.
+                . My path has covered full-stack development, enterprise system
+                design, and network infrastructure, from building the accounting
+                engine of an in-house ERP to deploying web applications and
+                configuring the networks beneath them. That range taught me to
+                think about systems end to end, not just the piece in front of
+                me.
               </p>
             </div>
 
             <div>
-              <p className='mb-2 font-mono text-xs uppercase tracking-wider text-white/60'>
-                My Focus &amp; Next Chapter
+              <p className='mb-2 block font-mono text-xs uppercase tracking-wider text-neutral-500'>
+                MY FOCUS &amp; NEXT CHAPTER
               </p>
-              <p className='font-Ovo leading-relaxed text-white/90'>
-                Now, I am actively focusing my path toward{' '}
-                <span className='text-[#F87171]'>Data Science</span>. Backed by
-                specialized training and continuous hands-on projects, my focus
-                is on bridging software development with data analytical
-                models. I want to build intelligent, data-driven software that
-                doesn&apos;t just collect information, but turns it into
-                meaningful insights that help businesses and people grow.
+              <p className='text-sm leading-relaxed text-neutral-300 md:text-base'>
+                My strongest direction is{' '}
+                <span className='font-semibold text-red-500'>
+                  Data Science &amp; Analytics
+                </span>
+                : turning raw information into analysis, models, and insights
+                people can act on. Backed by specialized training and ongoing
+                hands-on projects, I’m working to bridge software development
+                with data analytics, building software that doesn’t just collect
+                data but makes sense of it.
+              </p>
+            </div>
+
+            <div>
+              <p className="text-sm leading-relaxed text-neutral-300 md:text-base">
+                That said, I’m{" "}
+                <span className="font-semibold text-emerald-400">
+                  adaptable across software, data, and infrastructure roles
+                </span>
+                . With a foundation in software development and networking, I can
+                contribute wherever I add value, and I’m always{" "}
+                <span className="font-semibold text-red-500">
+                  ready to learn what a role demands
+                </span>
+                .
               </p>
             </div>
           </div>
         </article>
 
-        <aside className='rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm dark:bg-transparent md:p-8 lg:col-span-4'>
+        <aside className='rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm md:p-8 lg:col-span-4 dark:bg-transparent'>
           <h3 className='mb-6 font-Ovo text-xl'>Journey</h3>
           <ol className='space-y-5'>
             <li>
@@ -105,18 +121,18 @@ const About = () => {
         </aside>
       </div>
 
-      <blockquote className='mt-10 rounded-2xl border border-neutral-200/60 bg-neutral-50 p-6 shadow-xs dark:bg-neutral-900/60 dark:border-neutral-800 md:p-8'>
+      <blockquote className='shadow-xs mt-10 rounded-2xl border border-neutral-200/60 bg-neutral-50 p-6 md:p-8 dark:border-neutral-800 dark:bg-neutral-900/60'>
         <span className='mb-3 block text-xs font-bold uppercase tracking-widest text-neutral-400'>
           Leadership endorsement
         </span>
-        <p className='mb-4 text-base font-medium text-neutral-800 dark:text-neutral-200 italic leading-relaxed md:text-lg'>
+        <p className='mb-4 text-base font-medium italic leading-relaxed text-neutral-800 md:text-lg dark:text-neutral-200'>
           Safiul successfully led a critical Google Drive &amp; Sheets API
           integration when documentation was minimal. His initiative, deep
           R&amp;D, and independent problem-solving mindset delivered a seamless
           solution. He brings the exact dedication, efficiency, and engineering
           ownership that drives major projects forward.
         </p>
-        <footer className='text-sm font-semibold text-neutral-900 dark:text-neutral-100 not-italic'>
+        <footer className='text-sm font-semibold not-italic text-neutral-900 dark:text-neutral-100'>
           — Osman Haruni Shin, Deputy Manager at SDP, BRAC
         </footer>
       </blockquote>
