@@ -7,7 +7,12 @@ import { AnimatePresence, motion } from "motion/react";
 import { Cpu, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
-const categories = ["All", "Software Engineering", "Data Science & AI"];
+const categories = [
+  "All",
+  "Software Engineering",
+  "Data Science & AI",
+  "Data Analytics",
+];
 
 const Projects = ({ isDarkMode }) => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -82,7 +87,7 @@ const Projects = ({ isDarkMode }) => {
                 {project.bgImage ? (
                   <Image
                     src={project.bgImage}
-                    alt={project.title}
+                    alt={project.imageAlt || project.title}
                     width={640}
                     height={360}
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
@@ -122,6 +127,12 @@ const Projects = ({ isDarkMode }) => {
                   {project.description}
                 </p>
 
+                {project.note && (
+                  <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
+                    {project.note}
+                  </p>
+                )}
+
                 <p className="mt-4 text-sm font-semibold text-[#E27355]">
                   {project.highlight}
                 </p>
@@ -141,10 +152,10 @@ const Projects = ({ isDarkMode }) => {
                   <a
                     href={project.link}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-medium text-[#E27355] transition-colors hover:text-[#c95f43]"
                   >
-                    View project
+                    {project.linkLabel || "View project"}
                     <Image src={assets.send_icon} alt="" className="w-4" />
                   </a>
                 </div>
