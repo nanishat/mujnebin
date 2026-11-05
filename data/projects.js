@@ -1,5 +1,27 @@
 export const projects = [
   {
+    title: "ERP Solution: Accounting Module & Engine",
+    description:
+      "A web-based accounting system and double-entry engine for an in-house ERP, built from scratch. Covers general ledger and journal entries with posting and reversals, customer invoices and vendor bills, payment allocation, VAT/TDS/VDS tax handling, CSV bank statement import with match/unmatch reconciliation, and financial reports (trial balance, general ledger, balance sheet, profit & loss, and cash flow) with XLSX and PDF export. Includes an income vs. expense dashboard, receivables and payables, and branch- and period-level filtering.",
+    category: "Full-Stack",
+    techStack: [
+      "TypeScript",
+      "Next.js 16",
+      "React 19",
+      "PostgreSQL",
+      "Prisma",
+      "Tailwind CSS",
+      "Recharts",
+      "Docker",
+    ],
+    highlight: "Double-entry accounting · Financial reporting",
+    bgImage: "/accounting-dashboard.png",
+    imageAlt: "Accounting dashboard with financial reports and ERP metrics",
+    note: "Screenshots use mock data.",
+    link: "https://github.com/nanishat/musical-spork",
+    linkLabel: "View on GitHub",
+  },
+  {
     title: "BRAC SDP Operational Performance Dashboard",
     description:
       "End-to-end analytics project: cleaned and structured a mock dataset modelled on the BRAC Skills Development Programme, performed exploratory data analysis, and built an interactive Looker Studio dashboard covering enrollment, graduation, dropout, demographics, district-wise performance, trade-wise breakdowns, and batch completion rates by gender.",

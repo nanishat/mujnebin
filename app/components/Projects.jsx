@@ -9,6 +9,7 @@ import Image from "next/image";
 
 const categories = [
   "All",
+  "Full-Stack",
   "Software Engineering",
   "Data Science & AI",
   "Data Analytics",
