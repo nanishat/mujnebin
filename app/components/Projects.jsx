@@ -7,13 +7,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { Cpu, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
-const categories = [
-  "All",
-  "Full-Stack",
-  "Software Engineering",
-  "Data Science & AI",
-  "Data Analytics",
-];
+const categories = ["All", "Software Development", "Data & AI"];
 
 const Projects = ({ isDarkMode }) => {
   const [activeCategory, setActiveCategory] = useState("All");
