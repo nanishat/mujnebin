@@ -3,7 +3,7 @@ export const projects = [
     title: "ERP Solution: Accounting Module & Engine",
     description:
       "A web-based accounting system and double-entry engine for an in-house ERP, built from scratch. Covers general ledger and journal entries with posting and reversals, customer invoices and vendor bills, payment allocation, VAT/TDS/VDS tax handling, CSV bank statement import with match/unmatch reconciliation, and financial reports (trial balance, general ledger, balance sheet, profit & loss, and cash flow) with XLSX and PDF export. Includes an income vs. expense dashboard, receivables and payables, and branch- and period-level filtering.",
-    category: "Software Development",
+    category: "Software Development  & AI",
     techStack: [
       "TypeScript",
       "Next.js 16",
@@ -18,14 +18,13 @@ export const projects = [
     bgImage: "/accounting-dashboard.png",
     imageAlt: "Accounting dashboard with financial reports and ERP metrics",
     note: "Screenshots use mock data.",
-    link: "https://github.com/nanishat/musical-spork",
-    linkLabel: "View on GitHub",
+    isPrivate: true,
   },
   {
     title: "BRAC SDP Operational Performance Dashboard",
     description:
       "End-to-end analytics project: cleaned and structured a mock dataset modelled on the BRAC Skills Development Programme, performed exploratory data analysis, and built an interactive Looker Studio dashboard covering enrollment, graduation, dropout, demographics, district-wise performance, trade-wise breakdowns, and batch completion rates by gender.",
-    category: "Data & AI",
+    category: "Data",
     techStack: ["Looker Studio", "Google Sheets", "Data cleaning", "EDA"],
     highlight:
       "4,678 learners · 4,401 graduated (94.1%) · 5 districts · 8 batches",
@@ -40,7 +39,7 @@ export const projects = [
     title: "Titanic Survival: Exploratory Data Analysis",
     description:
       "End-to-end EDA of the Kaggle Titanic dataset in Python. Handled missing values, duplicates, and outliers; engineered age group, family size, and is-alone features; and analysed survival by gender, class, and age group with univariate and bivariate analysis, a correlation heatmap, and a t-test on gender survival differences.",
-    category: "Data & AI",
+    category: "Data",
     techStack: [
       "Python",
       "pandas",
@@ -62,28 +61,28 @@ export const projects = [
     title: "Protection One Security Platform",
     description:
       "Security operations and guard-tracking platform supporting Protection One teams, backed by a production Linux deployment and secure web infrastructure.",
-    category: "Software Development",
+    category: "Software Development  & AI",
     techStack: ["Linux", "Nginx", "SSH", "CORS"],
     highlight: "2,000+ guards",
     bgImage: null,
-    link: "https://github.com/nanishat",
+    isPrivate: true,
     visual: "security",
   },
   {
     title: "BRAC SDP Troubleshooting Web App",
     description:
       "Centralized issue reporting across 370+ BRAC branches, streamlining incident tracking for field teams nationwide.",
-    category: "Software Development",
+    category: "Software Development  & AI",
     techStack: ["React", "Node.js", "Express.js", "SQL"],
     highlight: "400+ active users",
     bgImage: "/ttwf.png",
-    link: "https://github.com/nanishat/supreme-dollop",
+    isPrivate: true,
   },
   {
     title: "Conversational AI Chatbot",
     description:
       "An interactive chatbot built around natural-language understanding and real-time responses.",
-    category: "Data & AI",
+    category: "Software Development  & AI",
     techStack: ["Python", "Natural Language Processing", "AI"],
     highlight: "Real-time responses",
     bgImage: "/Chatbot.png",

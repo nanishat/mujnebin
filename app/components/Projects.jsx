@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { Cpu, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
-const categories = ["All", "Software Development", "Data & AI"];
+const categories = ["All", "Software Development  & AI", "Data"];
 
 const Projects = ({ isDarkMode }) => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -115,9 +115,16 @@ const Projects = ({ isDarkMode }) => {
               </div>
 
               <div className="flex flex-1 flex-col p-5">
-                <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">
-                  {project.title}
-                </h3>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">
+                    {project.title}
+                  </h3>
+                  {project.isPrivate && (
+                    <span className="rounded-full border border-neutral-200 bg-neutral-100 px-2.5 py-1 text-xs font-medium leading-tight text-neutral-600 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
+                      🔒 Private — company project
+                    </span>
+                  )}
+                </div>
                 <p className="mt-2 line-clamp-2 text-sm text-neutral-600 dark:text-chineseWhite/80">
                   {project.description}
                 </p>
@@ -143,17 +150,19 @@ const Projects = ({ isDarkMode }) => {
                   ))}
                 </div>
 
-                <div className="flex items-center justify-between border-t border-neutral-200/80 pt-4 dark:border-neutral-700">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[#E27355] transition-colors hover:text-[#c95f43]"
-                  >
-                    {project.linkLabel || "View project"}
-                    <Image src={assets.send_icon} alt="" className="w-4" />
-                  </a>
-                </div>
+                {project.link && (
+                  <div className="flex items-center justify-between border-t border-neutral-200/80 pt-4 dark:border-neutral-700">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-[#E27355] transition-colors hover:text-[#c95f43]"
+                    >
+                      {project.linkLabel || "View project"}
+                      <Image src={assets.send_icon} alt="" className="w-4" />
+                    </a>
+                  </div>
+                )}
               </div>
             </motion.article>
           ))}
