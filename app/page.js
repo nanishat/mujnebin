@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div id="top" className="bg-paper pb-28 dark:bg-darkTheme md:pb-0">
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <Header isDarkMode={isDarkMode} />
+      <Header />
       <About />
       <Experience />
       <Skills />

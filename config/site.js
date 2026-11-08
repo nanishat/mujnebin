@@ -29,10 +29,6 @@ export const socialLinks = [
   },
 ]
 
-export const profileLinks = socialLinks.filter(
-  ({ label }) => label === 'GitHub' || label === 'LinkedIn',
-)
-
 export const profile = {
   name: 'Safiul Mujnebin',
   location: 'Dhaka, Bangladesh',
