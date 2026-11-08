@@ -19,11 +19,14 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         className={`fixed top-0 z-50 hidden w-full md:block ${isScroll ? 'border-b border-neutral-200/80 bg-paper/80 backdrop-blur dark:border-arsenic dark:bg-richBlack/80' : ''}`}
       >
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 md:px-12">
-          <a href="#top" aria-label="Mujnebin home">
+          <a href="#top" aria-label="Mujnebin home" className="flex items-center">
             <Image
               src={isDarkMode ? assets.logo_dark : assets.logo}
               alt="Mujnebin."
-              className="w-28 cursor-pointer"
+              width={isDarkMode ? 2103 : 1915}
+              height={isDarkMode ? 748 : 821}
+              priority
+              className="block h-8 w-auto cursor-pointer object-contain md:h-10"
             />
           </a>
 
