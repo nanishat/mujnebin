@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: Outfit;
-}
-
 .profile-ring {
   position: relative;
   padding: 0.5rem;

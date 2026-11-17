@@ -18,7 +18,8 @@ module.exports = {
         darkTheme: '#07111D',
       },
       fontFamily: {
-        Ovo: ["Ovo", "sans-serif"]
+          sans: ['var(--font-sans)'],
+          mono: ['var(--font-mono)'],
       }
     },
   },

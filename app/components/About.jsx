@@ -77,7 +77,7 @@ const About = () => {
         </article>
 
         <aside className='rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm md:p-8 lg:col-span-4 dark:bg-transparent'>
-          <h3 className='mb-6 font-Ovo text-xl'>Journey</h3>
+          <h3 className='mb-6 font-sans text-xl'>Journey</h3>
           <ol className='space-y-5'>
             <li>
               <p className='font-mono text-xs text-neutral-500 dark:text-chineseWhite/70'>

@@ -1,25 +1,32 @@
 import { Analytics } from "@vercel/analytics/next"
-import { Outfit, Ovo } from 'next/font/google'
+import { IBM_Plex_Mono, IBM_Plex_Sans } from 'next/font/google'
 import { siteMetadata } from '@/config/site'
 import './globals.css'
 
-const outfit = Outfit({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-sans',
 })
 
-const ovo = Ovo({
+const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['400', '500'],
+  display: 'swap',
+  variable: '--font-mono',
 })
 
 export const metadata = siteMetadata
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html
+      lang="en"
+      className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} scroll-smooth`}
+    >
       <body
-        className={`${outfit.className} ${ovo.className} overflow-x-hidden bg-chineseWhite leading-8 text-richBlack antialiased dark:bg-richBlack dark:text-chineseWhite`}
+        className={`${ibmPlexSans.className} overflow-x-hidden bg-chineseWhite leading-8 text-richBlack antialiased dark:bg-richBlack dark:text-chineseWhite`}
       >
         <Analytics />
         {children}

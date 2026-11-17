@@ -37,7 +37,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               {navigationLinks.map((link) => (
                 <li key={link.href}>
                   <a
-                    className="relative font-Ovo after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-200 hover:after:scale-x-100"
+                    className="relative font-sans after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-200 hover:after:scale-x-100"
                     href={link.href}
                   >
                     {link.label}
